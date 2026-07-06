@@ -13,6 +13,8 @@ import NotFound from './pages/NotFound'
 import Elevate from './pages/Elevate'
 import Australia from './pages/Australia'
 import Canada from './pages/Canada'
+import SaudiArabia from './pages/SaudiArabia'
+import UAE from './pages/UAE'
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
           {/* Countries Served Route with preserved typo */}
           <Route path="countires-we-serve/australia" element={<Australia />} />
           <Route path="countires-we-serve/canada" element={<Canada />} />
+          <Route path="countires-we-serve/saudi-arabia" element={<SaudiArabia />} />
+          <Route path="countires-we-serve/uae" element={<UAE />} />
           <Route path="countires-we-serve/:countrySlug" element={<CountryDetail />} />
         </Route>
 

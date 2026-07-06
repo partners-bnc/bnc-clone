@@ -52,7 +52,7 @@ export default function Australia() {
           
           {/* Left Text */}
           <div className="w-full lg:w-[487px] space-y-6">
-            <h1 className="text-[44px] md:text-[60px] font-serif font-normal text-[#00305B] leading-[68px]">
+            <h1 className="text-[44px] md:text-[60px] font-display font-extrabold text-[#00305B] leading-[68px]">
               Outsourcing Services For AUSTRALIA
             </h1>
             <p className="text-[18px] text-slate-700 leading-relaxed font-avenir font-normal">
@@ -115,7 +115,7 @@ export default function Australia() {
                 {/* Assessable Income */}
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                   <div className="w-full lg:w-[500px] space-y-4">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">
                       Assessable income
                     </h3>
                     <p className="text-[17px] text-[#BFD9ED] leading-relaxed font-avenir">
@@ -130,7 +130,7 @@ export default function Australia() {
                 {/* Exploring Exempt Income */}
                 <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
                   <div className="w-full lg:w-[500px] space-y-4">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">
                       Exploring Exempt Income
                     </h3>
                     <p className="text-[17px] text-[#BFD9ED] leading-relaxed font-avenir">
@@ -145,7 +145,7 @@ export default function Australia() {
                 {/* Understanding Non-Exempt Income */}
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                   <div className="w-full lg:w-[500px] space-y-4">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">
                       Understanding Non-Exempt Income
                     </h3>
                     <p className="text-[17px] text-[#BFD9ED] leading-relaxed font-avenir">
@@ -160,7 +160,7 @@ export default function Australia() {
                 {/* Taxable Income */}
                 <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
                   <div className="w-full lg:w-[500px] space-y-6">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">
                       Taxable income
                     </h3>
                     <p className="text-[17px] text-[#BFD9ED] leading-relaxed font-avenir">
@@ -240,7 +240,7 @@ export default function Australia() {
                   {/* Category 1 */}
                   <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex flex-col justify-between gap-6">
                     <div className="space-y-3">
-                      <h3 className="text-[24px] font-serif text-white">Australian Resident for Tax Purposes</h3>
+                      <h3 className="text-[24px] font-display font-bold text-white">Australian Resident for Tax Purposes</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         If you satisfy any of the residency tests, you are considered an Australian tax resident. This means you must declare your worldwide income, even if you've already paid taxes on it overseas. Typically, a foreign income tax offset is available to reduce your Australian tax liability on the same income.
                       </p>
@@ -253,7 +253,7 @@ export default function Australia() {
                   {/* Category 2 */}
                   <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex flex-col justify-between gap-6">
                     <div className="space-y-3">
-                      <h3 className="text-[24px] font-serif text-white">Foreign Residents</h3>
+                      <h3 className="text-[24px] font-display font-bold text-white">Foreign Residents</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         You are classified as a foreign resident if you fail to meet any of the residency tests. As a foreign resident, you do not have access to a tax-free threshold and are exempt from paying the Medicare levy. However, you are still required to report any income earned in Australia, including capital gains from taxable Australian property.
                       </p>
@@ -266,7 +266,7 @@ export default function Australia() {
                   {/* Category 3 */}
                   <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex flex-col justify-between gap-6">
                     <div className="space-y-3">
-                      <h3 className="text-[24px] font-serif text-white">Temporary Residents</h3>
+                      <h3 className="text-[24px] font-display font-bold text-white">Temporary Residents</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         You will be a ‘temporary resident’ if you hold a temporary visa and neither you nor your spouse is an Australian resident within the meaning of the Social Security Act 1991 (that is, not an Australian citizen or permanent resident).
                       </p>
@@ -279,7 +279,7 @@ export default function Australia() {
                   {/* Category 4 */}
                   <div className="bg-white/5 p-8 rounded-2xl border border-white/10 flex flex-col justify-between gap-6">
                     <div className="space-y-3">
-                      <h3 className="text-[24px] font-serif text-white">Dual residents</h3>
+                      <h3 className="text-[24px] font-display font-bold text-white">Dual residents</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         You are considered to be a dual resident if you are a resident of Australia for domestic income tax law purposes, and a resident of another country for that other country’s tax laws. Where Australia has a double tax treaty with a foreign country, a treaty tie-breaker test would usually determine which country has the right to tax.
                       </p>
@@ -322,10 +322,10 @@ export default function Australia() {
                     className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none"
                   />
                   <div className="relative text-center space-y-4 z-10">
-                    <h2 className="text-[44px] md:text-[75px] font-serif font-normal text-white leading-tight">
+                    <h2 className="text-[44px] md:text-[75px] font-display font-extrabold text-white leading-tight">
                       Australian
                     </h2>
-                    <p className="text-[24px] md:text-[50px] font-serif font-normal text-[#A3D9F6]">
+                    <p className="text-[24px] md:text-[50px] font-display font-extrabold text-[#A3D9F6]">
                       Due Dates & Tax Rates
                     </p>
                   </div>
@@ -453,7 +453,7 @@ export default function Australia() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Founders quote card */}
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-              <h3 className="text-[28px] font-serif font-normal text-[#00305B]">
+              <h3 className="text-[28px] font-display font-extrabold text-[#00305B]">
                 Stay connected for more information
               </h3>
               <p className="text-[18px] text-slate-700 leading-relaxed font-avenir font-normal italic">
@@ -485,7 +485,7 @@ export default function Australia() {
           {/* Questionnaire CTA */}
           <div className="bg-[#00305B] text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden">
             <div className="space-y-6 z-10 md:w-[60%]">
-              <h3 className="text-[28px] md:text-[34px] font-serif font-normal leading-tight">
+              <h3 className="text-[28px] md:text-[34px] font-display font-extrabold leading-tight">
                 Give us an opportunity to assist you by filling the questionnaire
               </h3>
               <p className="text-[16px] text-slate-300 font-avenir leading-relaxed">

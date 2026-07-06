@@ -61,7 +61,7 @@ export default function Canada() {
           
           {/* Left Text */}
           <div className="w-full lg:w-[487px] space-y-6">
-            <h1 className="text-[44px] md:text-[60px] font-serif font-normal text-[#00305B] leading-[68px]">
+            <h1 className="text-[44px] md:text-[60px] font-display font-extrabold text-[#00305B] leading-[68px]">
               Outsourcing Services for Canada
             </h1>
             <p className="text-[18px] text-slate-700 leading-relaxed font-avenir font-normal">
@@ -127,7 +127,7 @@ export default function Canada() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start border-b border-white/10 pb-12">
                   {/* Left block */}
                   <div className="space-y-6">
-                    <h3 className="text-[26px] font-serif text-white">Value Added Tax(VAT)</h3>
+                    <h3 className="text-[26px] font-sans text-white">Value Added Tax(VAT)</h3>
                     <p className="text-[17px] text-[#BFD9ED] leading-relaxed font-avenir">
                       Referred to as Goods and Services Tax (GST), VAT is administered by the federal government. It is applied to various goods and services.
                     </p>
@@ -137,7 +137,7 @@ export default function Canada() {
                   </div>
                   {/* Right block */}
                   <div className="space-y-6">
-                    <h3 className="text-[26px] font-serif text-white">Provincial Sales Tax(PST)</h3>
+                    <h3 className="text-[26px] font-sans text-white">Provincial Sales Tax(PST)</h3>
                     <p className="text-[17px] text-[#BFD9ED] leading-relaxed font-avenir">
                       PST, on the other hand, is imposed by provincial governments. The rates of provincial sales tax can differ from one province to another and may be calculated based on the value of goods and services either before or after the federal tax assessment.
                     </p>
@@ -196,7 +196,7 @@ export default function Canada() {
 
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 border-b border-white/10 pb-12">
                   <div className="w-full lg:w-[500px] space-y-6">
-                    <h3 className="text-[28px] font-serif text-white">You need a SIN to:</h3>
+                    <h3 className="text-[28px] font-display font-bold text-white">You need a SIN to:</h3>
                     <ul className="list-disc list-inside text-[#BFD9ED] font-avenir space-y-2 text-[17px]">
                       <li>Work in Canada</li>
                       <li>File taxes and claim benefits</li>
@@ -277,18 +277,18 @@ export default function Canada() {
 
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 border-b border-white/10 pb-12">
                   <div className="w-full lg:w-[500px] space-y-6">
-                    <h3 className="text-[24px] font-serif text-white">15-Character Payroll Number Structure:</h3>
+                    <h3 className="text-[24px] font-display font-extrabold text-white">15-Character Payroll Number Structure:</h3>
                     <div className="space-y-4 font-avenir text-[16px] text-[#BFD9ED]">
                       <div>
-                        <strong className="text-white font-bold font-serif block text-[18px]">A. Nine-digit BN</strong>
+                        <strong className="text-white font-bold font-sans block text-[18px]">A. Nine-digit BN</strong>
                         <span>Unique federal government numbering system identifying your business.</span>
                       </div>
                       <div>
-                        <strong className="text-white font-bold font-serif block text-[18px]">B. Two-letter RP code</strong>
+                        <strong className="text-white font-bold font-sans block text-[18px]">B. Two-letter RP code</strong>
                         <span>Program code representing payroll program ("RP").</span>
                       </div>
                       <div>
-                        <strong className="text-white font-bold font-serif block text-[18px]">C. Four-digit reference</strong>
+                        <strong className="text-white font-bold font-sans block text-[18px]">C. Four-digit reference</strong>
                         <span>Reference number identifying each account program details.</span>
                       </div>
                     </div>
@@ -347,19 +347,19 @@ export default function Canada() {
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                   <div className="w-full lg:w-[500px] space-y-6">
                     <div className="space-y-2">
-                      <h3 className="text-[24px] font-serif text-white">Employer</h3>
+                      <h3 className="text-[24px] font-display font-extrabold text-white">Employer</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         The CRA generally considers you to be an employer if you pay salaries, wages, bonuses, or provide taxable benefits. An individual is an employee if the worker and the payer have an employer-employee relationship (contract of service).
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-[24px] font-serif text-white">Trustee</h3>
+                      <h3 className="text-[24px] font-display font-extrabold text-white">Trustee</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         Employment by a trustee in bankruptcy or other trustees.
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-[24px] font-serif text-white">Payer of other amounts</h3>
+                      <h3 className="text-[24px] font-display font-extrabold text-white">Payer of other amounts</h3>
                       <p className="text-[16px] text-[#BFD9ED] leading-relaxed font-avenir">
                         An executor, liquidator, administrator, or director who pays pensions, lump-sums, self-employed commissions, annuities, retiring allowances, research grants, or death benefits.
                       </p>
@@ -424,10 +424,10 @@ export default function Canada() {
                     className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none"
                   />
                   <div className="relative text-center space-y-4 z-10">
-                    <h2 className="text-[44px] md:text-[75px] font-serif font-normal text-white leading-tight">
+                    <h2 className="text-[44px] md:text-[75px] font-display font-extrabold text-white leading-tight">
                       Canadian
                     </h2>
-                    <p className="text-[24px] md:text-[50px] font-serif font-normal text-[#A3D9F6]">
+                    <p className="text-[24px] md:text-[50px] font-display font-extrabold text-[#A3D9F6]">
                       Due Dates
                     </p>
                   </div>
@@ -486,7 +486,7 @@ export default function Canada() {
                 {/* Bookkeeping Services */}
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 border-b border-white/10 pb-12">
                   <div className="w-full lg:w-[500px] space-y-4">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">Bookkeeping Services</h3>
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">Bookkeeping Services</h3>
                     <p className="text-[17px] text-[#BFD9ED] font-avenir leading-relaxed">
                       Onboarding at a cost of 26 CAD. Our bookkeeping services include bank reconciliation, credit card reconciliation, and monthly financial statements. We offer monthly fixed pricing based on transaction volume.
                     </p>
@@ -499,7 +499,7 @@ export default function Canada() {
                 {/* Income Tax Preparation */}
                 <div className="space-y-8 border-b border-white/10 pb-12">
                   <div className="text-center space-y-2">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">Income Tax Preparation</h3>
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">Income Tax Preparation</h3>
                     <p className="text-[17px] text-[#BFD9ED] font-avenir">
                       Pricing for Income Tax preparation is tabulated below wrt types of returns.
                     </p>
@@ -517,7 +517,7 @@ export default function Canada() {
                 {/* HST Filing */}
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 border-b border-white/10 pb-12">
                   <div className="w-full lg:w-[500px] space-y-4">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">HST Filing Services</h3>
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">HST Filing Services</h3>
                     <p className="text-[17px] text-[#BFD9ED] font-avenir leading-relaxed">
                       Pricing based on business turnover for HST filing and submission to the CRA.
                     </p>
@@ -530,7 +530,7 @@ export default function Canada() {
                 {/* Payroll Preparation Services */}
                 <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 pb-12">
                   <div className="w-full lg:w-[500px] space-y-6">
-                    <h3 className="text-[28px] md:text-[34px] font-serif font-normal text-white">Payroll Preparation Services</h3>
+                    <h3 className="text-[28px] md:text-[34px] font-display font-extrabold text-white">Payroll Preparation Services</h3>
                     <p className="text-[17px] text-[#BFD9ED] font-avenir leading-relaxed">
                       Detailed payroll pricing structure is tabulated below. Please take note of the following parameters:
                     </p>
@@ -587,7 +587,7 @@ export default function Canada() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Founders quote card */}
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-              <h3 className="text-[28px] font-serif font-normal text-[#00305B]">
+              <h3 className="text-[28px] font-display font-extrabold text-[#00305B]">
                 Stay connected for more information
               </h3>
               <p className="text-[18px] text-slate-700 leading-relaxed font-avenir font-normal italic">
@@ -619,7 +619,7 @@ export default function Canada() {
           {/* Questionnaire CTA */}
           <div className="bg-[#00305B] text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden">
             <div className="space-y-6 z-10 md:w-[60%]">
-              <h3 className="text-[28px] md:text-[34px] font-serif font-normal leading-tight">
+              <h3 className="text-[28px] md:text-[34px] font-display font-extrabold leading-tight">
                 Give us an opportunity to assist you by filling the questionnaire
               </h3>
               <p className="text-[16px] text-slate-300 font-avenir leading-relaxed">
