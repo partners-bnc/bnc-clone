@@ -1,0 +1,27 @@
+/* Google Fonts import removed — Wix Madefor Display/Text are now self-hosted via @fontsource-variable (imported in main.jsx) */
+/* Corben is still loaded from Google Fonts since Fontsource doesn't have it as a variable font */
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Corben", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Wix Madefor Text Variable", "Wix Madefor Text", sans-serif;
+  --font-display: "Wix Madefor Display Variable", "Wix Madefor Display", sans-serif;
+  --font-avenir: "Wix Madefor Text Variable", "Wix Madefor Text", sans-serif;
+}
+
+/* --- Global Typography Custom Rules (Visual Sync with Wix Live Site) --- */
+
+@layer base {
+  /* Reset all headings to Wix Madefor Display Variable by default (matches live site overrides) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  /* Sync body text family */
+  body {
+    font-family: var(--font-sans);
+  }
+}
