@@ -123,7 +123,7 @@ export default function Home() {
       <section className="relative w-full bg-white">
         <div className="max-w-[1296px] mx-auto aspect-video mt-[25px] mb-[33px] overflow-hidden">
           <video
-            src="/file.mp4"
+            src="https://bvvqyjqokvnttbgyjkrt.supabase.co/storage/v1/object/public/video_bnc.in/file.mp4"
             autoPlay
             loop
             muted
