@@ -15,6 +15,8 @@ import Australia from './pages/Australia'
 import Canada from './pages/Canada'
 import SaudiArabia from './pages/SaudiArabia'
 import UAE from './pages/UAE'
+import Communities from './pages/Communities'
+import TransformingProfessionals from './pages/TransformingProfessionals'
 
 function App() {
   return (
@@ -34,8 +36,8 @@ function App() {
 
           {/* Top-level Careers Sub-Routes to match live site exactly */}
           <Route path="elevate" element={<Elevate />} />
-          <Route path="transforming-professionals" element={<CareersSubPage slug="transforming-professionals" />} />
-          <Route path="communities" element={<CareersSubPage slug="communities" />} />
+          <Route path="transforming-professionals" element={<TransformingProfessionals />} />
+          <Route path="communities" element={<Communities />} />
 
           {/* Dynamic sub-routes as fallback */}
           <Route path="careers/:slug" element={<CareersSubPage />} />

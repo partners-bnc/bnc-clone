@@ -45,7 +45,7 @@ export default function Careers() {
             
             {/* Left Column */}
             <div className="lg:col-span-6 space-y-6">
-              <h1 className="text-4xl sm:text-5xl font-serif font-normal text-slate-900 tracking-tight leading-none">
+              <h1 className="text-[45px] font-display font-extrabold text-[#00305B] tracking-tight leading-tight">
                 Career
               </h1>
               <p className="text-slate-600 text-lg leading-relaxed font-medium">
@@ -82,10 +82,10 @@ export default function Careers() {
             
             {/* Left Column */}
             <div className="lg:col-span-6 space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-[#1D67CD] tracking-tight">
+              <h2 className="text-[30px] font-display font-extrabold text-black tracking-tight">
                 Temporary Staffing
               </h2>
-              <h3 className="text-xl font-bold text-slate-800">
+              <h3 className="text-[18px] md:text-[20px] font-bold text-slate-800 font-display">
                 Build Skills. Gain Experience. Secure Your Future.
               </h3>
               <div className="space-y-4">
@@ -131,7 +131,7 @@ export default function Careers() {
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-serif font-normal text-slate-900 text-base">Mail Us!</h4>
+                <h4 className="font-display font-bold text-slate-900 text-[20px]">Mail Us!</h4>
                 <p className="text-slate-500 text-sm font-sans">info@bncglobal.in</p>
               </div>
             </a>
@@ -147,7 +147,7 @@ export default function Careers() {
                 <MessageSquare className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-serif font-normal text-slate-900 text-base">Join Us!</h4>
+                <h4 className="font-display font-bold text-slate-900 text-[20px]">Join Us!</h4>
                 <p className="text-slate-500 text-sm font-sans">BNC Global WhatsApp Community</p>
               </div>
             </a>
@@ -161,7 +161,7 @@ export default function Careers() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center space-y-3">
-            <h2 className="text-3xl font-serif font-normal text-[#1D67CD] tracking-tight">
+            <h2 className="text-[28px] font-display font-extrabold text-black tracking-tight">
               Your ambition is as bold as ours.
             </h2>
             <p className="text-slate-500">
@@ -367,7 +367,7 @@ export default function Careers() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+          <h2 className="text-[32px] sm:text-[48px] font-display font-extrabold text-white tracking-tight">
             Your ambition is as bold as ours.
           </h2>
           <p className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
