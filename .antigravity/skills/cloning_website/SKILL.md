@@ -46,9 +46,11 @@ Run this script to retrieve text nodes and style properties:
 }
 ```
 
-### Font Selection Rules for Antigravity
-*   **Titles & Headings:** Wix pages wrap display headings in nested `<span>` elements using **Wix Madefor Display** (`font-display font-extrabold`). Do NOT fall back to `corben/serif` unless explicitly audited as such.
-*   **Paragraph Body:** Use `font-avenir` (`Wix Madefor Text`) for general descriptions.
+### Font Selection Rules & Wix Style Override Bug
+*   **Wix Style Override Bug (CRITICAL):** Wix's computed styles sometimes report text elements as using `corben, serif` (or fallback fonts) when they are visually rendered using the global sans-serif theme font (**Wix Madefor Display** / `font-display font-extrabold`). 
+    *   *Rule:* ALWAYS visually verify heading fonts against the live site screenshots. Do not blindly trust computed `font-family` property values if they contradict the visual layout.
+*   **Titles & Headings:** Most display headings should map to **Wix Madefor Display** (`font-display font-extrabold`). Use `font-serif` (Corben) only if the text is explicitly a styled serif font on the live page.
+*   **Paragraph Body:** Use `font-sans` (Wix Madefor Text/Avenir) for general descriptions.
 *   **Color Palette:** Synced header blue `#00305B`, primary blue `#1D67CD`, accent light blue `#A3D9F6`, mint backgrounds `#F5FFF7`, and text-on-blue `#BFD9ED`.
 
 ---
@@ -62,9 +64,15 @@ Wix CDN uses AVIF format by default. Antigravity must fetch high-res PNG or JPG 
 
 ---
 
-## 4. Multi-State & Tabs Architecture
+## 4. Layout Math & Centering Constraints
 
-Wix pages often rely on multi-state boxes for complex regulatory details (e.g. tax rules, due dates, categories).
-*   Implement these as interactive React state togglers (`const [activeTab, setActiveTab] = useState(0)`).
-*   For tabs lists that wrap, use a responsive flex grid (e.g. `grid grid-cols-2 md:grid-cols-4 gap-4`) to present the selector buttons cleanly.
-*   Keep content layout widths restricted to `max-w-[1122px]` (centered via `mx-auto`) to preserve live grid alignments.
+*   **Standard Content Grid:** Restrict general page layouts to a max width of `max-w-[1122px]` (centered via `mx-auto`) to match BNC standard page columns.
+*   **Wix 1360px Grid Strip:** For full-bleed/staggered sections (like Hero banners with overlapping columns), the container should wrap to exactly `max-w-[1360px] px-4 md:px-0 mx-auto`.
+*   **Staggered Overlapping Columns:**
+    *   Wix layout columns are often `63.3%` (`860.9px`) of the `1360px` container.
+    *   Left column (image): width `w-full md:w-[63.3%]`, positioned absolutely at `left-0`.
+    *   Right column (navy text box): width `w-full md:w-[63.3%]`, positioned absolutely at `right-0`, shifted down vertically (e.g. `top-[80px]`).
+    *   *Text Padding:* Use exact padding (e.g. `md:pl-[140px] md:pr-16`) inside the overlapping box to align the inner text exactly with the center of the page grid.
+*   **Multi-State & Tabs Architecture:**
+    *   Implement tabs as interactive React state togglers (`const [activeTab, setActiveTab] = useState(0)`).
+    *   For wrapping tab buttons, use a responsive flex grid (e.g. `grid grid-cols-2 md:grid-cols-4 gap-4`).

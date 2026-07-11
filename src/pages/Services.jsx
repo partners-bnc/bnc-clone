@@ -15,7 +15,8 @@ export default function Services() {
       title: 'Cybersecurity & Data Privacy Compliances',
       desc: 'Protect critical business data and confidently meet global regulatory requirements with BNC Global. We empower organizations to safeguard what matters most—their data—through comprehensive compliance frameworks',
       icon: iconCyber,
-      darkTheme: false
+      darkTheme: false,
+      path: '/cybersecurity'
     },
     {
       title: 'ESG Advisory',
@@ -27,37 +28,43 @@ export default function Services() {
       title: 'Virtual CFO',
       desc: 'BNC Global Virtual CFO strategic solution promptly addresses critical challenges faced by entrepreneurs and business entities, especially during the nascent stages of their operations.',
       icon: iconCfo,
-      darkTheme: false
+      darkTheme: false,
+      path: '/virtual-cfo'
     },
     {
       title: 'Accounting Services',
       desc: 'BNC Global is a strategic outsourcing partner that simplifies end-to-end accounting management while helping organizations optimize operational costs.?',
       icon: iconAccounting,
-      darkTheme: true
+      darkTheme: true,
+      path: '/accounting'
     },
     {
       title: 'All types of tax outsourcing service',
       desc: 'BNC Global delivers end-to-end tax compliance and outsourcing services across multiple jurisdictions, helping individuals and organisations navigate complex tax regulations with confidence and accuracy.',
       icon: iconTax,
-      darkTheme: true
+      darkTheme: true,
+      path: '/income-tax-service-soutsourcing'
     },
     {
       title: 'Finance Advisory',
       desc: 'We provide strategic, data-driven financial guidance to support growth, restructuring, and efficiency, with cost analysis to optimize spending and improve profitability.',
       icon: iconAdvisory,
-      darkTheme: true
+      darkTheme: true,
+      path: '/finance-advisory'
     },
     {
       title: 'Inventory Verification',
       desc: 'BNC Global is a strategic outsourcing partner that simplifies end-to-end accounting management while helping organizations optimize operational costs.?',
       icon: iconInventory,
-      darkTheme: false
+      darkTheme: false,
+      path: '/digital-stock-asset-verification'
     },
     {
       title: 'Global Capability Center',
       desc: 'India is a global hub for GCCs, and BNC Global supports you in setting up, managing, and scaling your GCC with end-to-end advisory, HR, legal, and infrastructure support.',
       icon: iconAdvisory, // Fallback to advisory icon
-      darkTheme: false
+      darkTheme: false,
+      path: '/create-or-manage-your-gcc-in-india'
     }
   ]
 
@@ -119,7 +126,7 @@ export default function Services() {
 
                 <div className="pt-6">
                   <Link
-                    to="/contact-8"
+                    to={cat.path || '/contact-8'}
                     className={`inline-flex items-center gap-1 text-[14px] font-bold hover:underline ${
                       cat.darkTheme ? 'text-[#F5FFF7]' : 'text-[#1D67CD]'
                     }`}

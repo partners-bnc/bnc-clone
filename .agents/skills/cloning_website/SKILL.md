@@ -1,92 +1,78 @@
 ---
 name: cloning_website
-description: Guides the agent step-by-step on how to clone pages from the live Wix site (https://www.bncglobal.in) into React + Tailwind pages for Antigravity using browser/Chrome DevTools MCP.
+description: Guides the Antigravity agent step-by-step on how to clone pages from the live Wix site (https://www.bncglobal.in) into React + Tailwind pages using browser/Chrome DevTools MCP.
 ---
 
-# Cloning Live Site Pages into React Components for Antigravity
+# Antigravity Skill Guide: Wix Site Cloning
 
-This skill guide provides step-by-step instructions on how to use browser capabilities (such as the Chrome DevTools MCP server or Playwright subagents) to audit, download assets, and clone pages from the original Wix website (`https://www.bncglobal.in`) into the local React application with pixel-perfect accuracy.
-
----
-
-## Step 1: Open and Audit the Live Page
-
-1. Navigate your browser tool to the target live page on `https://www.bncglobal.in` (e.g., `https://www.bncglobal.in/countires-we-serve/canada` or `https://www.bncglobal.in/elevate`).
-2. Wix lazy-loads images and sections. Ensure the browser is scrolled from top to bottom in small increments (around 600px each step with a brief delay) to trigger all lazy-load hooks and render all images.
-3. Scroll back to the top (`window.scrollTo(0,0)`) before analyzing the DOM.
+This guide is specifically designed for the **Antigravity** agentic assistant to clone pages from the live BNC Global Wix website (`https://www.bncglobal.in`) into the local React + Tailwind codebase.
 
 ---
 
-## Step 2: Extract Content & Styles
+## 1. Antigravity Operation Flow
 
-1. Run an evaluation script to capture all visible texts, font sizes, weights, families, colors, and layout rectangles:
-   ```javascript
-   () => {
-     const allElements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a'));
-     const results = [];
-     allElements.forEach((el) => {
-       const txt = el.innerText.trim();
-       if (!txt) return;
-       const style = window.getComputedStyle(el);
-       const rect = el.getBoundingClientRect();
-       if (rect.width < 5 || rect.height < 5) return;
-       results.push({
-         tag: el.tagName,
-         text: txt,
-         fontFamily: style.fontFamily,
-         fontSize: style.fontSize,
-         fontWeight: style.fontWeight,
-         color: style.color,
-         rect: { left: rect.left, top: rect.top, width: rect.width, height: rect.height }
-       });
-     });
-     return results;
-   }
-   ```
-2. Save this parsed text log to a temporary scratch file to keep it out of the main conversation context.
-3. Identify section backgrounds by filtering for full-width containers (`width > 1000px`) that have solid background colors (e.g., `#1D67CD` or `#00305B`).
+When a user requests to clone a page, Antigravity must follow this operational plan:
 
-> [!IMPORTANT]
-> **Wix Font Quirk:** Headline text is often wrapped inside a nested `<span>` with a computed font family like `Wix Madefor Display` or `Wix Madefor Text`. The outer semantic heading tag (`H1`/`H2`) may inherit fallback fonts. Always inspect the computed styles of the *inner text span* to determine the exact font.
+1. **Enter Planning Mode:** Research the live page structure and draft a detailed `implementation_plan.md` outlining the sections, typography, colors, and asset list. Wait for explicit user approval before execution.
+2. **Setup Task Tracking:** Create or update `task.md` with checkable items for each section and verification steps. Mark them as `[/]` (in progress) and `[x]` (completed) as you code.
+3. **Download Assets:** Use the custom Node.js downloader script to pull graphics and tables to `src/assets`.
+4. **Draft Component:** Write clean React page components matching the audited CSS layout.
+5. **Verify & Walkthrough:** Build the bundle with `npm run build`, navigate local headless Chrome to inspect visual rendering, and document findings in `walkthrough.md`.
 
 ---
 
-## Step 3: Extract and Download High-Resolution Assets
+## 2. Browser Auditing & Style Scraping
 
-1. Retrieve the list of all image URLs on the page:
-   ```javascript
-   () => Array.from(new Set(Array.from(document.querySelectorAll('img')).map(img => img.src)))
-   ```
-2. **Convert AVIF to Web-Safe Formats:** Wix CDN serves URLs containing `/v1/fill/.../enc_avif/...`. To download high-resolution PNG or JPG assets that render correctly in the local bundle:
-   - Replace `enc_avif` with `enc_auto` in the URL.
-   - Run a Node.js utility script in the background to fetch these images and save them directly to the `src/assets` folder.
-   - Prefix asset filenames by country or page area (e.g. `can_hero1.jpg`, `aus_cta.png`) to keep them organized.
+Use the Chrome DevTools MCP tools to inspect the live elements on `https://www.bncglobal.in`.
+
+### Text and Font Audit
+Run this script to retrieve text nodes and style properties:
+```javascript
+() => {
+  const elements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, a'));
+  return elements.map(el => {
+    const style = window.getComputedStyle(el);
+    const rect = el.getBoundingClientRect();
+    return {
+      tag: el.tagName,
+      text: el.innerText.trim(),
+      fontFamily: style.fontFamily,
+      fontSize: style.fontSize,
+      fontWeight: style.fontWeight,
+      color: style.color,
+      rect: { left: rect.left, top: rect.top, width: rect.width, height: rect.height }
+    };
+  }).filter(e => e.text.length > 0);
+}
+```
+
+### Font Selection Rules & Wix Style Override Bug
+*   **Wix Style Override Bug (CRITICAL):** Wix's computed styles sometimes report text elements as using `corben, serif` (or fallback fonts) when they are visually rendered using the global sans-serif theme font (**Wix Madefor Display** / `font-display font-extrabold`). 
+    *   *Rule:* ALWAYS visually verify heading fonts against the live site screenshots. Do not blindly trust computed `font-family` property values if they contradict the visual layout.
+*   **Titles & Headings:** Most display headings should map to **Wix Madefor Display** (`font-display font-extrabold`). Use `font-serif` (Corben) only if the text is explicitly a styled serif font on the live page.
+*   **Paragraph Body:** Use `font-sans` (Wix Madefor Text/Avenir) for general descriptions.
+*   **Color Palette:** Synced header blue `#00305B`, primary blue `#1D67CD`, accent light blue `#A3D9F6`, mint backgrounds `#F5FFF7`, and text-on-blue `#BFD9ED`.
 
 ---
 
-## Step 4: Rebuild the Layout Structure
+## 3. High-Resolution Asset Retrieval
 
-1. **Multi-Tab Layouts:** Check if the live page implements tabs (Wix Multi-State Containers). Rebuild these in React using simple `useState` tab togglers. Ensure that changing tabs displays the respective descriptions and assets.
-2. **Typography Mapping:**
-   - Headings/Hero Titles: Use `font-display font-extrabold` (Wix Madefor Display).
-   - Paragraphs/Copy: Use `font-avenir` (Wix Madefor Text).
-3. **Margins & Spacing:** Keep container widths restricted to `max-w-[1122px]` (centered via `mx-auto`) to match Wix's grid boundaries.
-
----
-
-## Step 5: Routing & Registration
-
-1. Map the new route inside `src/App.jsx`.
-2. For countries, place the dedicated route *above* the dynamic fallback:
-   ```jsx
-   <Route path="countires-we-serve/canada" element={<Canada />} />
-   <Route path="countires-we-serve/:countrySlug" element={<CountryDetail />} />
-   ```
-3. Update dropdown lists inside `src/components/Header.jsx` to direct links to the new route.
+Wix CDN uses AVIF format by default. Antigravity must fetch high-res PNG or JPG alternatives to ensure seamless cross-browser rendering:
+1. Extract page image URLs.
+2. Replace `/enc_avif/...` in wixstatic CDN URLs with `/enc_auto/...`.
+3. Save downloaded assets directly to `src/assets` and import them using ES6 imports.
 
 ---
 
-## Step 6: Verification
+## 4. Layout Math & Centering Constraints
 
-1. Run `npm run build` to confirm the production build completes with no unmapped assets or compile issues.
-2. Navigate to your local page and visually inspect each section against the live site, making sure all images are loaded (`naturalWidth > 0`) and fonts are correctly computed.
+*   **Standard Content Grid:** Restrict general page layouts to a max width of `max-w-[1122px]` (centered via `mx-auto`) to match BNC standard page columns.
+*   **Wix 1360px Grid Strip:** For full-bleed/staggered sections (like Hero banners with overlapping columns), the container should wrap to exactly `max-w-[1360px] px-4 md:px-0 mx-auto`.
+*   **Staggered Overlapping Columns:**
+    *   Wix layout columns are often `63.3%` (`860.9px`) of the `1360px` container.
+    *   Left column (image): width `w-full md:w-[63.3%]`, positioned absolutely at `left-0`.
+    *   Right column (navy text box): width `w-full md:w-[63.3%]`, positioned absolutely at `right-0`, shifted down vertically (e.g. `top-[80px]`).
+    *   *Text Padding:* Use exact padding (e.g. `md:pl-[140px] md:pr-16`) inside the overlapping box to align the inner text exactly with the center of the page grid.
+*   **Multi-State & Tabs Architecture:**
+    *   Implement tabs as interactive React state togglers (`const [activeTab, setActiveTab] = useState(0)`).
+    *   For wrapping tab buttons, use a responsive flex grid (e.g. `grid grid-cols-2 md:grid-cols-4 gap-4`).
