@@ -13,6 +13,7 @@ import cfoNum21 from '../assets/cfo_num21.png'
 import cfoNum22 from '../assets/cfo_num22.png'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import SEO from '../components/SEO'
 
 export default function VirtualCFO() {
   const subServices = [
@@ -29,6 +30,11 @@ export default function VirtualCFO() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
+      <SEO
+        title="Virtual CFO Services & Financial Advisory"
+        description="Boardroom-ready Virtual CFO services including capital budgeting, ICFR internal controls, tax advisory, and strategic financial management."
+        canonical="/virtual-cfo"
+      />
       
       {/* 1. Hero Section */}
       <section className="relative w-full bg-white py-12 md:py-16 border-b border-slate-100 min-h-[600px] flex items-center">

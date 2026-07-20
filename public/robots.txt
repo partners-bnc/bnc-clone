@@ -1,0 +1,5 @@
+# http://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bncglobal.in/sitemap.xml

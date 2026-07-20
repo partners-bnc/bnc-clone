@@ -1,7 +1,29 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronUp, ChevronDown, Search, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import SEO from '../components/SEO'
 import corridorImg from '../assets/india_saudi_corridor.png'
+
+const homeSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'BNC Global Consultech',
+  url: 'https://www.bncglobal.in',
+  logo: 'https://www.bncglobal.in/logo.png',
+  description: 'BNC Global provides specialized Risk & Management Consulting, Accounting Outsourcing, Virtual CFO, and Tax Advisory services.',
+  telephone: '+919810575613',
+  email: 'info@bncglobal.in',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'IN',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/bnc-global-consulteck/',
+    'https://www.instagram.com/bncglobal.in/',
+    'https://www.facebook.com/bncglobal.in/',
+    'https://www.youtube.com/@bncglobalconsultech',
+  ],
+}
 import reviewImg from '../assets/reviewing_financial_reports.png'
 import iconAccounting from '../assets/icon_accounting.png'
 import iconTax from '../assets/icon_tax.png'
@@ -118,6 +140,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-slate-800 antialiased font-sans">
+      <SEO
+        title="Risk & Management Consulting"
+        description="BNC Global delivers boardroom-ready Virtual CFO support, outsourced bookkeeping, payroll, and corporate tax compliance services."
+        canonical="/"
+        jsonLd={homeSchema}
+      />
       
       {/* 1. Hero Video Section (Centered Video Player with exact live site margins) */}
       <section className="relative w-full bg-white">

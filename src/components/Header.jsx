@@ -59,34 +59,38 @@ export default function Header() {
         <div className="flex justify-between h-[115px] items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center">
-              <img className="h-[63px] w-[137px] object-contain" src={headerLogo} alt="BNC Logo" />
+            <Link to="/" className="flex items-center rounded focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none" aria-label="BNC Global Home Page">
+              <img className="h-[63px] w-[137px] object-contain" src={headerLogo} alt="BNC Global Logo" />
             </Link>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex space-x-1 items-center">
+          <nav aria-label="Main Navigation" className="hidden lg:flex space-x-1 items-center">
             {navLinks.map((link, idx) => {
               if (link.dropdown) {
+                const isDropdownOpen = activeDropdown === idx
                 return (
                   <div key={link.name} className="relative group">
                     <button
                       onClick={() => toggleDropdown(idx)}
-                      className={`flex items-center gap-1 px-4 py-2 text-[14px] font-normal leading-[31px] text-black hover:text-blue-600 transition-all cursor-pointer ${
+                      aria-expanded={isDropdownOpen}
+                      aria-haspopup="true"
+                      className={`flex items-center gap-1 px-4 py-2 text-[14px] font-normal leading-[31px] text-black hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded transition-all cursor-pointer ${
                         link.dropdown.some((sub) => isActive(sub.path)) ? 'text-blue-600 font-semibold' : ''
                       }`}
                     >
                       {link.name}
-                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" aria-hidden="true" />
                     </button>
                     {/* Dropdown menu wrapper to bridge the hover gap */}
-                    <div className="absolute left-0 top-full pt-2 w-56 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
-                      <div className="rounded-xl bg-white border border-slate-150 shadow-xl py-2">
+                    <div className="absolute left-0 top-full pt-2 w-56 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto focus-within:opacity-100 focus-within:scale-100 focus-within:pointer-events-auto transition-all duration-200 z-50">
+                      <div className="rounded-xl bg-white border border-slate-150 shadow-xl py-2" role="menu">
                         {link.dropdown.map((subItem) => (
                           <Link
                             key={subItem.name}
                             to={subItem.path}
-                            className={`block px-4 py-2.5 text-[14px] text-black hover:text-blue-600 hover:bg-slate-50 transition-colors ${
+                            role="menuitem"
+                            className={`block px-4 py-2.5 text-[14px] text-black hover:text-blue-600 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none transition-colors ${
                               isActive(subItem.path) ? 'bg-blue-50/50 text-blue-600 font-semibold' : ''
                             }`}
                           >
@@ -106,10 +110,10 @@ export default function Header() {
                     href={link.path}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-1 px-4 py-2 text-[14px] font-normal leading-[31px] text-black hover:text-blue-600 transition-all"
+                    className="flex items-center gap-1 px-4 py-2 text-[14px] font-normal leading-[31px] text-black hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded transition-all"
                   >
                     {link.name}
-                    <ExternalLink className="w-3.5 h-3.5" />
+                    <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
                   </a>
                 )
               }
@@ -118,7 +122,7 @@ export default function Header() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`px-4 py-2 text-[14px] font-normal leading-[31px] transition-all ${
+                  className={`px-4 py-2 text-[14px] font-normal leading-[31px] focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded transition-all ${
                     isActive(link.path)
                       ? 'text-blue-600 font-normal'
                       : 'text-black hover:text-blue-600'
@@ -134,9 +138,12 @@ export default function Header() {
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-slate-500 hover:text-blue-600 hover:bg-slate-100 focus:outline-none transition-colors cursor-pointer"
+              aria-label={isOpen ? "Close main navigation menu" : "Open main navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-slate-500 hover:text-blue-600 hover:bg-slate-100 focus-visible:ring-2 focus-visible:ring-blue-600 focus:outline-none transition-colors cursor-pointer"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>

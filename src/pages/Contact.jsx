@@ -4,6 +4,7 @@ import contactVisit from '../assets/contact_visit.png'
 import contactEmail from '../assets/contact_email.png'
 import contactWhatsapp from '../assets/contact_whatsapp.png'
 import { Send, CheckCircle2 } from 'lucide-react'
+import SEO from '../components/SEO'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,6 +31,11 @@ export default function Contact() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
+      <SEO
+        title="Contact Us - Global Offices in India & Saudi Arabia"
+        description="Get in touch with BNC Global. Reach our offices in Riyadh, Saudi Arabia and Gurgaon, India for financial consulting and advisory services."
+        canonical="/contact-8"
+      />
       
       {/* 1. Hero Banner */}
       <section className="relative py-24 flex items-center justify-center overflow-hidden">

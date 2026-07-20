@@ -4,18 +4,24 @@ import timelineImg from '../assets/timeline.png'
 import partnershipImg from '../assets/partnership.jpg'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import SEO from '../components/SEO'
 
 export default function AboutUs() {
   return (
     <div className="bg-[#0B2F5B] text-slate-800 antialiased font-sans">
+      <SEO
+        title="About Us - BNC Global Consultech"
+        description="Learn about BNC Global Consultech, a contemporary risk advisory and management consulting firm serving SMEs, startups, and global enterprises."
+        canonical="/about-us"
+      />
       
       {/* 1. Hero Section (Pixel Perfect Constraints) */}
       <section className="relative w-full min-h-[665px] bg-[#0B2F5B] text-white border-b border-slate-800 flex flex-col lg:flex-row justify-between items-stretch overflow-hidden">
         {/* Left text column */}
         <div className="w-full lg:w-[374px] lg:ml-[290px] shrink-0 pt-16 lg:pt-[164px] pb-10 px-6 lg:px-0 space-y-6 z-10 flex flex-col justify-start">
-          <h2 className="text-[44px] font-display font-extrabold tracking-tight leading-none text-left">
+          <h1 className="text-[44px] font-display font-extrabold tracking-tight leading-none text-left">
             About Us
-          </h2>
+          </h1>
           <p className="text-[#BFD9ED] text-[19px] leading-[26.6px] font-medium font-avenir text-left">
             BNC Global Consulteck is a contemporary consulting and advisory firm, embodying the spirit of innovation and modernity. We represent the future of business support services, specialization in risk advisory, management consulting, tax and corporate advisory for SMEs and startups.
           </p>

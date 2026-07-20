@@ -3,6 +3,7 @@ import careersHero from '../assets/careers_hero.png'
 import careersStaffing from '../assets/careers_staffing.png'
 import careersFooter from '../assets/careers_footer.jpg'
 import { Mail, CheckCircle2, MessageSquare, ArrowRight, User, GraduationCap, Briefcase, Calendar, UploadCloud, MapPin, Phone } from 'lucide-react'
+import SEO from '../components/SEO'
 
 export default function Careers() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -23,7 +24,9 @@ export default function Careers() {
   }
 
   const handleFileChange = (e) => {
-    setFormData(prev => ({ ...prev, cv: e.target.files[0] }))
+    if (e.target.files && e.target.files[0]) {
+      setFormData(prev => ({ ...prev, cv: e.target.files[0] }))
+    }
   }
 
   const handleSubmit = (e) => {
@@ -37,6 +40,11 @@ export default function Careers() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
+      <SEO
+        title="Careers & Opportunities - Join BNC Global"
+        description="Explore career opportunities at BNC Global. Join our team of risk advisory, financial, and management consulting professionals."
+        canonical="/careers"
+      />
       
       {/* 1. Hero Section */}
       <section className="py-20 md:py-28 border-b border-slate-100">

@@ -8,6 +8,7 @@ import iconAccounting from '../assets/icon_accounting.png'
 import iconTax from '../assets/icon_tax.png'
 import iconAdvisory from '../assets/icon_advisory.png'
 import iconInventory from '../assets/icon_inventory.png'
+import SEO from '../components/SEO'
 
 export default function Services() {
   const categories = [
@@ -70,6 +71,11 @@ export default function Services() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
+      <SEO
+        title="BNC Global Services - Consulting & Compliance"
+        description="Discover BNC Global Services: Cybersecurity, Virtual CFO, ESG Advisory, Tax & Accounting Outsourcing, and Corporate Governance."
+        canonical="/bnc-global-services"
+      />
       
       {/* 1. Hero Banner */}
       <section className="relative py-28 flex items-center justify-center overflow-hidden">
