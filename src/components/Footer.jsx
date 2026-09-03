@@ -83,9 +83,9 @@ export default function Footer() {
           <Link to="/privacy-policy" className="text-[#BFD9ED] hover:text-white focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:outline-none rounded transition-colors">
             Privacy Policy
           </Link>
-          <a href="https://www.bncglobal.in/blog/categories/soc-consultant" target="_blank" rel="noopener noreferrer" className="text-[#BFD9ED] hover:text-white focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:outline-none rounded transition-colors">
+          <Link to="/blog" className="text-[#BFD9ED] hover:text-white focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:outline-none rounded transition-colors">
             Blog
-          </a>
+          </Link>
         </nav>
 
       </div>

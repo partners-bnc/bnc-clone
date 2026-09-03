@@ -49,6 +49,8 @@ import FinanceAdvisory from './pages/FinanceAdvisory'
 import DigitalStockAssetVerification from './pages/DigitalStockAssetVerification'
 import CreateOrManageGCC from './pages/CreateOrManageGCC'
 import MeetOurTeam from './pages/MeetOurTeam'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   return (
@@ -97,6 +99,8 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="careers" element={<Careers />} />
           <Route path="cybersecurity" element={<Cybersecurity />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/:slug" element={<BlogPost />} />
 
 
           {/* Top-level Careers Sub-Routes to match live site exactly */}

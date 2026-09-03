@@ -16,6 +16,7 @@ const routes = [
   { path: '/about-us', priority: '0.8', changefreq: 'monthly' },
   { path: '/contact-8', priority: '0.8', changefreq: 'monthly' },
   { path: '/careers', priority: '0.8', changefreq: 'weekly' },
+  { path: '/blog', priority: '0.8', changefreq: 'weekly' },
   { path: '/cybersecurity', priority: '0.8', changefreq: 'monthly' },
   { path: '/accounting', priority: '0.8', changefreq: 'monthly' },
   { path: '/accounts-outsourcing', priority: '0.8', changefreq: 'monthly' },
