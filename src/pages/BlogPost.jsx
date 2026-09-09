@@ -47,7 +47,7 @@ export default function BlogPost() {
       navigator
         .share({
           title: story?.content?.title || story?.name,
-          text: story?.content?.excerpt || '',
+          text: story?.content?.meta_desc || story?.content?.excerpt || '',
           url: window.location.href,
         })
         .catch(() => {})
@@ -101,7 +101,7 @@ export default function BlogPost() {
 
   const content = story.content || {}
   const title = content.title || story.name
-  const excerpt = content.excerpt || ''
+  const metaDesc = content.meta_desc || content.excerpt || ''
   const category = content.category
   const author = content.author
   const date = content.date || story.first_published_at
@@ -114,7 +114,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: title,
-    description: excerpt,
+    description: metaDesc,
     image: coverImageUrl ? [coverImageUrl] : undefined,
     datePublished: date,
     author: {
@@ -132,11 +132,12 @@ export default function BlogPost() {
     <div className="min-h-screen bg-white">
       <SEO
         title={title}
-        description={excerpt}
+        description={metaDesc}
         ogType="article"
         ogImage={coverImageUrl}
         jsonLd={articleSchema}
       />
+      {metaDesc && <meta name="description" content={metaDesc} />}
 
       {/* Article Header */}
       <header className="bg-slate-50 border-b border-slate-200/80 pt-10 pb-12 sm:pt-14 sm:pb-16">
@@ -164,12 +165,7 @@ export default function BlogPost() {
             {title}
           </h1>
 
-          {/* Excerpt / Lead */}
-          {excerpt && (
-            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-sans mb-8">
-              {excerpt}
-            </p>
-          )}
+
 
           {/* Meta bar */}
           <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-200 text-xs sm:text-sm text-slate-600">

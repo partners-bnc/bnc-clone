@@ -46,7 +46,7 @@ export default function Blog() {
   // Filter posts based on search query and category
   const filteredPosts = posts.filter((post) => {
     const title = post.content?.title || post.name || ''
-    const excerpt = post.content?.excerpt || ''
+    const excerpt = post.content?.meta_desc || post.content?.excerpt || ''
     const category = post.content?.category || ''
     const matchesSearch =
       title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -151,7 +151,7 @@ export default function Blog() {
                   {filteredPosts.map((post) => {
                     const content = post.content || {}
                     const title = content.title || post.name
-                    const excerpt = content.excerpt || ''
+                    const excerpt = content.meta_desc || content.excerpt || ''
                     const category = content.category
                     const author = content.author
                     const readTime = content.read_time
