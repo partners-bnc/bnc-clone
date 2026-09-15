@@ -84,7 +84,7 @@ function renderNode(node, index) {
 
     case 'blockquote': {
       return (
-        <blockquote key={index} className="border-l-4 border-teal-600 pl-4 py-2 my-6 italic text-slate-800 bg-slate-50/70 rounded-r-lg">
+        <blockquote key={index} className="border-l-4 border-[#1D67CD] pl-4 py-2 my-6 italic text-slate-800 bg-slate-50/70 rounded-r-lg">
           {renderChildNodes(node.content)}
         </blockquote>
       )
@@ -128,7 +128,7 @@ function renderChildNodes(children) {
           } else if (mark.type === 'strike') {
             element = <s key={index} className="line-through">{element}</s>
           } else if (mark.type === 'code') {
-            element = <code key={index} className="bg-slate-100 text-teal-700 px-1.5 py-0.5 rounded text-sm font-mono">{element}</code>
+            element = <code key={index} className="bg-slate-100 text-[#0B2F5B] px-1.5 py-0.5 rounded text-sm font-mono">{element}</code>
           } else if (mark.type === 'link') {
             const href = mark.attrs?.href || '#'
             const isExternal = href.startsWith('http')
@@ -138,7 +138,7 @@ function renderChildNodes(children) {
                 href={href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}
-                className="text-teal-600 hover:text-teal-800 underline underline-offset-2 transition-colors font-medium"
+                className="text-[#1D67CD] hover:text-[#0B2F5B] underline underline-offset-2 transition-colors font-medium"
               >
                 {element}
               </a>
