@@ -20,10 +20,10 @@ export default function Header() {
       name: 'Countries we serve',
       path: '#',
       dropdown: [
-        { name: 'Australia', path: '/countires-we-serve/australia' },
-        { name: 'Canada', path: '/countires-we-serve/canada' },
-        { name: 'Saudi Arabia', path: '/countires-we-serve/saudi-arabia' },
-        { name: 'UAE', path: '/countires-we-serve/uae' },
+        { name: 'Australia', path: '/countries-we-serve/australia' },
+        { name: 'Canada', path: '/countries-we-serve/canada' },
+        { name: 'Saudi Arabia', path: '/countries-we-serve/saudi-arabia' },
+        { name: 'UAE', path: '/countries-we-serve/uae' },
       ],
     },
     {
