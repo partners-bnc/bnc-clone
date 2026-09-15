@@ -112,11 +112,11 @@ function App() {
           <Route path="careers/:slug" element={<CareersSubPage />} />
 
           {/* Countries Served Route with preserved typo */}
-          <Route path="countires-we-serve/australia" element={<Australia />} />
-          <Route path="countires-we-serve/canada" element={<Canada />} />
-          <Route path="countires-we-serve/saudi-arabia" element={<SaudiArabia />} />
-          <Route path="countires-we-serve/uae" element={<UAE />} />
-          <Route path="countires-we-serve/:countrySlug" element={<CountryDetail />} />
+          <Route path="countries-we-serve/australia" element={<Australia />} />
+          <Route path="countries-we-serve/canada" element={<Canada />} />
+          <Route path="countries-we-serve/saudi-arabia" element={<SaudiArabia />} />
+          <Route path="countries-we-serve/uae" element={<UAE />} />
+          <Route path="countries-we-serve/:countrySlug" element={<CountryDetail />} />
         </Route>
 
         {/* 404 Route outside Layout */}
