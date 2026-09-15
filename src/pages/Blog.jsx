@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Clock, User, ArrowRight, Search, BookOpen, AlertCircle } from 'lucide-react'
+import { Calendar, Clock, User, ArrowRight, Search, BookOpen, AlertCircle, Globe } from 'lucide-react'
 import SEO from '../components/SEO'
-import { getStoryBySlug, getStories, resolveImageUrl } from '../services/storyblok'
-import StoryblokBlockRenderer from '../components/blog/StoryblokBlockRenderer'
+import { getStories, resolveImageUrl } from '../services/storyblok'
 
 export default function Blog() {
-  const [homeStory, setHomeStory] = useState(null)
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -18,12 +16,7 @@ export default function Blog() {
       setLoading(true)
       setError(null)
       try {
-        const [homeData, postsData] = await Promise.all([
-          getStoryBySlug('home'),
-          getStories({ startsWith: 'blog/' }),
-        ])
-
-        setHomeStory(homeData)
+        const postsData = await getStories({ startsWith: 'blog/' })
         // Filter out folder stories or non-post stories
         const validPosts = (postsData.stories || []).filter(
           (s) => !s.is_folder && s.content && s.content.component === 'blog_post'
@@ -87,16 +80,52 @@ export default function Blog() {
         {/* Loaded Content */}
         {!loading && !error && (
           <>
-            {/* Storyblok Home Story Body (Hero, Featured Post, Banner, etc.) */}
-            {homeStory?.content?.body?.map((block) => (
-              <StoryblokBlockRenderer key={block._uid} block={block} />
-            ))}
+            {/* BNC Global Ties with Saudi Arabia — Hero Banner */}
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0B2F5B] via-[#0D3A6B] to-[#00305B] text-white p-8 sm:p-12 lg:p-16 mb-12 shadow-2xl border border-[#0B2F5B]/40">
+              {/* Decorative background glow */}
+              <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-[#1D67CD]/10 blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#1D67CD]/10 blur-3xl pointer-events-none" />
+
+              <div className="relative z-10 max-w-3xl">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1D67CD]/15 border border-[#A3D9F6]/30 text-[#A3D9F6] text-xs font-semibold tracking-wider uppercase mb-6">
+                  <Globe className="w-3.5 h-3.5" />
+                  Global Partnerships
+                </div>
+
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 font-display leading-[1.15]">
+                  BNC Global Ties with Saudi Arabia
+                </h1>
+
+                <p className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl font-sans font-normal">
+                  With over 15 years of operations, 500+ projects, and 50+ clients across 8 cities, BNC Global is a trusted partner in Saudi Arabia — driving growth aligned with Saudi Vision 2030.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-6">
+                  <Link
+                    to="/countries-we-serve/saudi-arabia"
+                    className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#1D67CD] hover:bg-[#1552a8] text-white font-semibold transition-all shadow-lg hover:shadow-[#1D67CD]/25 active:scale-95"
+                  >
+                    Explore Our Presence
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+
+                  <div className="border-l border-[#1D67CD]/40 pl-6 py-1">
+                    <div className="text-sm sm:text-base font-bold text-[#A3D9F6] tracking-wider uppercase">
+                      15+ Years
+                    </div>
+                    <div className="text-xs text-slate-400 uppercase tracking-wider mt-0.5">
+                      In Saudi Arabia
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* All Articles Section */}
             <div className="mt-16 pt-12 border-t border-slate-200">
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-teal-600 mb-2 block">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#1D67CD] mb-2 block">
                     All Publications
                   </span>
                   <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display">
@@ -113,7 +142,7 @@ export default function Blog() {
                       placeholder="Search articles..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full sm:w-64 pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full sm:w-64 pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#1D67CD] focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -125,7 +154,7 @@ export default function Blog() {
                           onClick={() => setSelectedCategory(category)}
                           className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                             selectedCategory === category
-                              ? 'bg-white text-teal-700 shadow-sm'
+                              ? 'bg-white text-[#0B2F5B] shadow-sm'
                               : 'text-slate-600 hover:text-slate-900'
                           }`}
                         >
@@ -161,7 +190,7 @@ export default function Blog() {
                     return (
                       <article
                         key={post.uuid || post.id}
-                        className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:border-teal-500/50"
+                        className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:border-[#1D67CD]/50"
                       >
                         {content.cover_image_url && (
                           <Link to={`/blog/${slug}`} className="block relative h-48 overflow-hidden bg-slate-100">
@@ -182,7 +211,7 @@ export default function Blog() {
                           <div>
                             <div className="flex items-center justify-between gap-2 mb-3">
                               {category && (
-                                <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">
+                                <span className="text-xs font-bold uppercase tracking-wider text-[#1D67CD] bg-blue-50 px-2.5 py-1 rounded-md">
                                   {category}
                                 </span>
                               )}
@@ -193,7 +222,7 @@ export default function Blog() {
                               )}
                             </div>
 
-                            <h3 className="text-xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors font-display mb-3 leading-snug line-clamp-2">
+                            <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#1D67CD] transition-colors font-display mb-3 leading-snug line-clamp-2">
                               <Link to={`/blog/${slug}`}>{title}</Link>
                             </h3>
 
@@ -225,7 +254,7 @@ export default function Blog() {
 
                             <Link
                               to={`/blog/${slug}`}
-                              className="text-teal-600 group-hover:text-teal-700 font-semibold inline-flex items-center gap-1"
+                              className="text-[#1D67CD] group-hover:text-[#0B2F5B] font-semibold inline-flex items-center gap-1"
                             >
                               Read <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                             </Link>

@@ -48,14 +48,14 @@ function HeroBlock({ block }) {
   const isExternal = linkUrl.startsWith('http') || linkUrl.startsWith('mailto:')
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F2830] via-[#163842] to-[#0A1E24] text-white p-8 sm:p-12 lg:p-16 mb-12 shadow-2xl border border-teal-900/40">
+    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0B2F5B] via-[#0D3A6B] to-[#00305B] text-white p-8 sm:p-12 lg:p-16 mb-12 shadow-2xl border border-[#0B2F5B]/40">
       {/* Decorative background glow */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-teal-500/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-[#1D67CD]/10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#1D67CD]/10 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl">
         {block.eyebrow && (
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-xs font-semibold tracking-wider uppercase mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1D67CD]/15 border border-[#A3D9F6]/30 text-[#A3D9F6] text-xs font-semibold tracking-wider uppercase mb-6">
             {block.eyebrow}
           </div>
         )}
@@ -77,7 +77,7 @@ function HeroBlock({ block }) {
             isExternal ? (
               <a
                 href={linkUrl}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold transition-all shadow-lg hover:shadow-teal-500/25 active:scale-95"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#1D67CD] hover:bg-[#1552a8] text-white font-semibold transition-all shadow-lg hover:shadow-[#1D67CD]/25 active:scale-95"
               >
                 {block.cta_label}
                 <ArrowRight className="w-4 h-4" />
@@ -85,7 +85,7 @@ function HeroBlock({ block }) {
             ) : (
               <Link
                 to={linkUrl}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold transition-all shadow-lg hover:shadow-teal-500/25 active:scale-95"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#1D67CD] hover:bg-[#1552a8] text-white font-semibold transition-all shadow-lg hover:shadow-[#1D67CD]/25 active:scale-95"
               >
                 {block.cta_label}
                 <ArrowRight className="w-4 h-4" />
@@ -94,9 +94,9 @@ function HeroBlock({ block }) {
           )}
 
           {(block.stat_label || block.stat_value) && (
-            <div className="border-l border-teal-800/80 pl-6 py-1">
+            <div className="border-l border-[#1D67CD]/40 pl-6 py-1">
               {block.stat_value && (
-                <div className="text-sm sm:text-base font-bold text-teal-300 tracking-wider uppercase">
+                <div className="text-sm sm:text-base font-bold text-[#A3D9F6] tracking-wider uppercase">
                   {block.stat_value}
                 </div>
               )}
@@ -130,12 +130,12 @@ function FeaturedPostBlock({ block }) {
 
   return (
     <CardWrapper>
-      <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0 group-hover:border-teal-500/50">
+      <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0 group-hover:border-[#1D67CD]/50">
         <div className="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-3 mb-4">
               {block.eyebrow && (
-                <span className="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#1D67CD] bg-blue-50 px-3 py-1 rounded-full">
                   {block.eyebrow}
                 </span>
               )}
@@ -146,7 +146,7 @@ function FeaturedPostBlock({ block }) {
               )}
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors font-display mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 group-hover:text-[#1D67CD] transition-colors font-display mb-4 leading-snug">
               {block.title}
             </h2>
 
@@ -157,7 +157,7 @@ function FeaturedPostBlock({ block }) {
             )}
           </div>
 
-          <div className="inline-flex items-center gap-2 text-teal-600 font-semibold group-hover:text-teal-700 transition-colors">
+          <div className="inline-flex items-center gap-2 text-[#1D67CD] font-semibold group-hover:text-[#0B2F5B] transition-colors">
             Read article
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </div>
@@ -177,8 +177,8 @@ function FeaturedPostBlock({ block }) {
               }}
             />
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-teal-800 to-slate-900 flex items-center justify-center p-8">
-              <span className="text-teal-200/50 font-display text-2xl font-bold">BNC Insights</span>
+            <div className="w-full h-full bg-gradient-to-br from-[#0B2F5B] to-slate-900 flex items-center justify-center p-8">
+              <span className="text-[#A3D9F6]/50 font-display text-2xl font-bold">BNC Insights</span>
             </div>
           )}
         </div>
@@ -193,11 +193,11 @@ function CtaBannerBlock({ block }) {
 
   return (
     <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 lg:p-14 my-12 relative overflow-hidden border border-slate-800 shadow-xl">
-      <div className="absolute top-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-[#1D67CD]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl">
         {block.eyebrow && (
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-400 mb-3 block">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#A3D9F6] mb-3 block">
             {block.eyebrow}
           </span>
         )}
@@ -218,7 +218,7 @@ function CtaBannerBlock({ block }) {
           isExternal ? (
             <a
               href={linkUrl}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#1D67CD] hover:bg-[#1552a8] text-white font-semibold transition-all shadow-md active:scale-95"
             >
               {block.button_label}
               <ArrowRight className="w-4 h-4" />
@@ -226,7 +226,7 @@ function CtaBannerBlock({ block }) {
           ) : (
             <Link
               to={linkUrl}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#1D67CD] hover:bg-[#1552a8] text-white font-semibold transition-all shadow-md active:scale-95"
             >
               {block.button_label}
               <ArrowRight className="w-4 h-4" />
@@ -242,7 +242,7 @@ function ComparisonBlock({ block }) {
   return (
     <div className="my-10 p-6 sm:p-8 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm">
       {block.eyebrow && (
-        <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-2.5 py-1 rounded-md mb-3 inline-block">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#0B2F5B] bg-blue-100/60 px-2.5 py-1 rounded-md mb-3 inline-block">
           {block.eyebrow}
         </span>
       )}
@@ -326,15 +326,15 @@ function RelatedPostBlock({ block }) {
 
   return (
     <Wrapper>
-      <div className="p-6 sm:p-7 rounded-2xl bg-teal-50/50 border border-teal-200/80 hover:border-teal-400 transition-all duration-200 shadow-sm hover:shadow-md flex flex-col sm:flex-row gap-6 items-start justify-between">
+      <div className="p-6 sm:p-7 rounded-2xl bg-blue-50/50 border border-[#ACD6E8]/80 hover:border-[#1D67CD] transition-all duration-200 shadow-sm hover:shadow-md flex flex-col sm:flex-row gap-6 items-start justify-between">
         <div className="flex-1">
           {block.eyebrow && (
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0B2F5B] mb-2 block">
               {block.eyebrow}
             </span>
           )}
 
-          <h4 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors font-display mb-2">
+          <h4 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-[#0B2F5B] transition-colors font-display mb-2">
             {block.title}
           </h4>
 
@@ -345,7 +345,7 @@ function RelatedPostBlock({ block }) {
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 text-teal-700 font-semibold text-sm shrink-0 self-end sm:self-center">
+        <div className="flex items-center gap-1.5 text-[#0B2F5B] font-semibold text-sm shrink-0 self-end sm:self-center">
           Read post
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </div>
