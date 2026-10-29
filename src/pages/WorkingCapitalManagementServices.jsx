@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import corridorImg from '../assets/india_saudi_corridor.png'
+import corridorImg from '../assets/india_saudi_corridor.webp'
 
 export default function WorkingCapitalManagementServices() {
   const subServices = [
@@ -37,7 +37,7 @@ export default function WorkingCapitalManagementServices() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-[#1D67CD] text-white py-12 md:py-16 min-h-[500px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default function WorkingCapitalManagementServices() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#00305B] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
                 >
                   <span>Connect to us</span>
@@ -75,7 +75,7 @@ export default function WorkingCapitalManagementServices() {
       {/* 2. Cash Flow Management Offerings (Navy Background) */}
       <section className="py-16 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-4xl space-y-4">
             <p className="text-[17px] text-[#BFD9ED] font-medium font-avenir leading-relaxed">
               Your company's cash flow may be disrupted by things like economic cycle phases, business dynamics, growth functions, and challenging periods. The management of payables and receivables is crucial during these times. A wise choice not only enhances cash flow but also contributes to more predictability.
@@ -105,7 +105,7 @@ export default function WorkingCapitalManagementServices() {
       {/* 3. Tasks Completed (White Background) */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-4xl space-y-4">
             <p className="text-[17px] text-slate-600 font-medium font-avenir leading-relaxed">
               The team at BnC helps businesses and provides working capital management services that enhance small enterprises' cash flow management. Our working capital management services assist businesses in putting in place the required procedures and systems to improve their working capital management.

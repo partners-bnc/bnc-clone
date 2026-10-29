@@ -13,7 +13,7 @@ export default function AccountsOutsourcing() {
     { name: 'Controller services', path: '/controller-services' },
     { name: 'Cost Analysis', path: '/cost-analysis' },
     { name: 'Customer & Vendor Reconciliation', path: '/customer-vendor-reconciliation' },
-    { name: 'Pay', path: '/pay' },
+    { name: 'Pay', path: '/payroll-reconciliation' },
     { name: 'Finance Advisory', path: '/finance-advisory' },
     { name: 'Digital Stock / Asset Verification', path: '/digital-stock-asset-verification' },
     { name: 'Create / Manage Your GCC In India', path: '/create-or-manage-your-gcc-in-india' }
@@ -36,12 +36,12 @@ export default function AccountsOutsourcing() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-[#00305B] to-[#0A2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl md:text-5xl font-display font-extrabold tracking-normal leading-tight">
@@ -52,7 +52,7 @@ export default function AccountsOutsourcing() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md transition-colors"
                 >
                   <span>Connect to us</span>
@@ -79,9 +79,9 @@ export default function AccountsOutsourcing() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={heroImg} 
-                alt="Account outsourcing illustration" 
+              <img
+                src={heroImg}
+                alt="Account outsourcing illustration"
                 className="w-full max-w-[440px] h-auto object-cover rounded-3xl"
               />
             </div>
@@ -111,7 +111,7 @@ export default function AccountsOutsourcing() {
       {/* 3. Benefits of Outsourcing (White Background) */}
       <section id="benefits" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Benefits of Outsourcing Financial Accounting
@@ -146,9 +146,9 @@ export default function AccountsOutsourcing() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={benefitsImg} 
-                alt="Benefits diagram" 
+              <img
+                src={benefitsImg}
+                alt="Benefits diagram"
                 className="w-full max-w-[400px] h-auto rounded-3xl"
               />
             </div>
@@ -160,7 +160,7 @@ export default function AccountsOutsourcing() {
       {/* 4. Challenges Faced (Light Background) */}
       <section id="challenges" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Challenges Faced by Businesses in Accounting
@@ -169,12 +169,12 @@ export default function AccountsOutsourcing() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Image */}
             <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
-              <img 
-                src={challengesImg} 
-                alt="Challenges illustration" 
+              <img
+                src={challengesImg}
+                alt="Challenges illustration"
                 className="w-full max-w-[320px] h-auto rounded-3xl"
               />
             </div>
@@ -204,7 +204,7 @@ export default function AccountsOutsourcing() {
       <section id="solution" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
@@ -217,9 +217,9 @@ export default function AccountsOutsourcing() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={solutionImg} 
-                alt="Solution details" 
+              <img
+                src={solutionImg}
+                alt="Solution details"
                 className="w-full max-w-[420px] rounded-3xl"
               />
             </div>
@@ -231,7 +231,7 @@ export default function AccountsOutsourcing() {
       {/* 6. Why Choose BnC */}
       <section id="why" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Why Choose BnC for Finance and Accounting Outsourcing?
@@ -274,7 +274,7 @@ export default function AccountsOutsourcing() {
       {/* 7. Other Outsourcing Services */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#1D67CD] tracking-tight">
               Other Outsourcing Services

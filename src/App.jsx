@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import SiteSEO from './seo/SiteSEO'
+import { Navigate } from 'react-router-dom'
+import site from './seo/site.json'
 import Home from './pages/Home'
 import VirtualCFO from './pages/VirtualCFO'
 import Services from './pages/Services'
@@ -55,11 +58,13 @@ import BlogPost from './pages/BlogPost'
 function App() {
   return (
     <BrowserRouter>
+      <SiteSEO />
       <Routes>
+        {Object.entries(site.redirects).map(([from, to]) => <Route key={from} path={from} element={<Navigate to={to} replace />} />)}
         {/* Pages wrapped in the common Header/Footer Layout */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          
+
           {/* Main Pages with synced routes */}
           <Route path="virtual-cfo" element={<VirtualCFO />} />
           <Route path="accounting-policy-preparation-services" element={<AccountingPolicyPreparationServices />} />
@@ -71,16 +76,16 @@ function App() {
           <Route path="accounting" element={<Accounting />} />
           <Route path="ar-ap" element={<ARAP />} />
           <Route path="inventory-management" element={<InventoryManagement />} />
-          <Route path="year-end" element={<YearEndAccounting />} />
+          <Route path="year-end-accounting" element={<YearEndAccounting />} />
           <Route path="audit-support-service" element={<AuditSupportService />} />
-          <Route path="outsouced-tax-preparation" element={<OutsourcedTaxPreparation />} />
+          <Route path="outsourced-tax-preparation" element={<OutsourcedTaxPreparation />} />
           <Route path="payroll-processing" element={<PayrollProcessing />} />
-          <Route path="bookeeping" element={<Bookkeeping />} />
+          <Route path="bookkeeping" element={<Bookkeeping />} />
           <Route path="quickbooks" element={<Quickbooks />} />
           <Route path="virtual-accounting" element={<VirtualAccounting />} />
-          <Route path="financial-statment-preparation-services" element={<FinancialStatementPreparation />} />
+          <Route path="financial-statement-preparation-services" element={<FinancialStatementPreparation />} />
           <Route path="xero-accounting" element={<XeroAccounting />} />
-          <Route path="income-tax-service-soutsourcing" element={<TaxOutsourcing />} />
+          <Route path="income-tax-outsourcing" element={<TaxOutsourcing />} />
           <Route path="accounts-outsourcing" element={<AccountsOutsourcing />} />
           <Route path="bank-card-reconciliations" element={<BankCardReconciliations />} />
           <Route path="business-analysis" element={<BusinessAnalysis />} />
@@ -88,14 +93,14 @@ function App() {
           <Route path="controller-services" element={<ControllerServices />} />
           <Route path="cost-analysis" element={<CostAnalysis />} />
           <Route path="customer-vendor-reconciliation" element={<CustomerVendorReconciliation />} />
-          <Route path="pay" element={<PayrollReconciliation />} />
+          <Route path="payroll-reconciliation" element={<PayrollReconciliation />} />
           <Route path="finance-advisory" element={<FinanceAdvisory />} />
           <Route path="digital-stock-asset-verification" element={<DigitalStockAssetVerification />} />
           <Route path="create-or-manage-your-gcc-in-india" element={<CreateOrManageGCC />} />
           <Route path="about-us/meet-our-team" element={<MeetOurTeam />} />
           <Route path="bnc-global-services" element={<Services />} />
           <Route path="about-us" element={<AboutUs />} />
-          <Route path="contact-8" element={<Contact />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="careers" element={<Careers />} />
           <Route path="cybersecurity" element={<Cybersecurity />} />

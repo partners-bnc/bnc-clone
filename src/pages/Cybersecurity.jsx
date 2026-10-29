@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 // Asset imports
-import cyberHero from '../assets/cyber_hero.png'
+import cyberHero from '../assets/cyber_hero.webp'
 import cyberBadge1 from '../assets/cyber_badge1.png'
 import cyberBadge2 from '../assets/cyber_badge2.png'
 import cyberBadge3 from '../assets/cyber_badge3.png'
 import cyberBadge4 from '../assets/cyber_badge4.png'
 import cyberBadge5 from '../assets/cyber_badge5.png'
-import cyberTeamWelcome from '../assets/cyber_team_welcome.png'
-import cyberTeamWelcomeF from '../assets/cyber_team_welcome_f.png'
+import cyberTeamWelcome from '../assets/cyber_team_welcome.webp'
+import cyberTeamWelcomeF from '../assets/cyber_team_welcome_f.webp'
 import cyberExpertise from '../assets/cyber_expertise.png'
 import cyberChooseUs from '../assets/cyber_choose_us.png'
 import cyberBanner from '../assets/cyber_banner.jpg'
@@ -19,22 +19,22 @@ export default function Cybersecurity() {
     {
       title: 'ISO/IEC 27001 – Information Security Management System (ISMS)',
       body: 'Design and implementation of a robust ISMS to identify, manage, and mitigate information security risks while ensuring data confidentiality, integrity, and availability.',
-      link: '/contact-8'
+      link: '/contact'
     },
     {
       title: 'SOC Certification (SOC 2) – Trust & Assurance',
       body: 'Readiness and certification support to demonstrate strong security, availability, confidentiality, and operational controls to customers, partners, and stakeholders.',
-      link: '/contact-8'
+      link: '/contact'
     },
     {
       title: 'GDPR Compliance – Data Privacy & Protection',
       body: 'Advisory and implementation services to ensure lawful, transparent, and secure processing of personal data in line with EU data protection regulations.',
-      link: '/contact-8'
+      link: '/contact'
     },
     {
       title: 'HIPAA Compliance – Sensitive & Health Data Security',
       body: 'Framework alignment and control implementation to enable secure handling of health-related and sensitive data in accordance with HIPAA requirements.',
-      link: '/contact-8'
+      link: '/contact'
     }
   ]
 
@@ -48,11 +48,11 @@ export default function Cybersecurity() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. HERO SECTION */}
       <section className="w-full bg-white py-16 lg:py-24 border-b border-slate-100 flex justify-center">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 flex flex-col lg:flex-row justify-between items-center gap-12">
-          
+
           {/* Left Text Column */}
           <div className="w-full lg:w-[560px] space-y-6">
             <h1 className="text-[40px] md:text-[52px] font-display font-extrabold leading-[1.15] flex flex-col">
@@ -60,7 +60,7 @@ export default function Cybersecurity() {
               <span className="text-[#1D67CD]">Cyber-Secure.</span>
               <span className="text-[#00305B]">Globally Assured.</span>
             </h1>
-            
+
             <div className="space-y-4">
               <p className="text-[20px] text-[#00305B] leading-relaxed font-avenir font-medium">
                 At BNC Global (<span className="text-[#1D67CD]">BNC Data Privacy</span>), we empower organisations to protect what matters most — their data.
@@ -106,7 +106,7 @@ export default function Cybersecurity() {
       {/* 2. OUR SERVICES SECTION */}
       <section className="w-full bg-[#1D67CD] py-20 lg:py-24 flex justify-center text-white">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 space-y-12">
-          
+
           <div className="max-w-[800px] space-y-4">
             <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-[#F5FFF7]">
               Our Services
@@ -131,7 +131,7 @@ export default function Cybersecurity() {
                     {card.body}
                   </p>
                 </div>
-                
+
                 <div className="pt-6">
                   <Link
                     to={card.link}
@@ -150,7 +150,7 @@ export default function Cybersecurity() {
       {/* 3. HOW BNC GLOBAL EMPOWERS SECTION */}
       <section className="w-full bg-white py-20 lg:py-24 border-b border-slate-100 flex justify-center">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 space-y-12">
-          
+
           <div className="text-center max-w-[800px] mx-auto">
             <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-[#00305B]">
               How BNC Global Empowers Corporates &amp; Individuals
@@ -181,7 +181,7 @@ export default function Cybersecurity() {
       {/* 4. OUR EXPERTISE SECTION */}
       <section className="w-full bg-[#F5FFF7] py-20 lg:py-24 border-b border-slate-100 flex justify-center">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 flex flex-col lg:flex-row items-center justify-between gap-12">
-          
+
           {/* Text content */}
           <div className="w-full lg:w-[480px] space-y-6">
             <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-[#00305B]">
@@ -192,7 +192,7 @@ export default function Cybersecurity() {
             </p>
             <div className="pt-2">
               <Link
-                to="/contact-8"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-[#1D67CD] text-white px-6 py-3 rounded-lg font-display font-bold text-[16px] hover:bg-[#00305B] shadow-md transition-all duration-300"
               >
                 Schedule Consultation <ArrowRight className="w-4 h-4" />
@@ -217,7 +217,7 @@ export default function Cybersecurity() {
       {/* 5. WHY CHOOSE US SECTION */}
       <section className="w-full bg-white py-20 lg:py-24 border-b border-slate-100 flex justify-center">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-          
+
           {/* Text Content */}
           <div className="w-full lg:w-[480px] space-y-6">
             <h2 className="text-[32px] md:text-[40px] font-display font-extrabold text-[#00305B]">
@@ -263,7 +263,7 @@ export default function Cybersecurity() {
           </div>
           <div className="shrink-0">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-[#00305B] px-6 py-3 rounded-lg font-display font-bold text-[16px] hover:bg-[#1D67CD] hover:text-white transition-all duration-300 shadow-md"
             >
               Get in Touch <ArrowRight className="w-4 h-4" />
@@ -293,7 +293,7 @@ export default function Cybersecurity() {
           </p>
           <div className="pt-6">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-3 bg-[#1D67CD] text-white px-8 py-4 rounded-xl font-display font-bold text-[18px] hover:bg-[#00305B] shadow-lg transition-all duration-300 hover:scale-105"
             >
               Build Trust Today <ArrowRight className="w-5 h-5" />

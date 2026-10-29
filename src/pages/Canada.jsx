@@ -22,7 +22,7 @@ import canResidency2 from '../assets/can_residency2.png'
 
 // Tab 8 & 9 & 10 images
 import canDatesBanner from '../assets/can_dates_banner.jpg'
-import canDates1 from '../assets/can_dates1.png'
+import canDates1 from '../assets/can_dates1.webp'
 import canException1 from '../assets/can_exception1.png'
 import canPricing1 from '../assets/can_pricing1.png'
 import canPricing2 from '../assets/can_pricing2.png'
@@ -54,11 +54,11 @@ export default function Canada() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* HERO SECTION */}
       <section className="w-full bg-white py-16 lg:py-24 border-b border-slate-100 flex justify-center">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 flex flex-col lg:flex-row justify-between items-center gap-12">
-          
+
           {/* Left Text */}
           <div className="w-full lg:w-[487px] space-y-6">
             <h1 className="text-[44px] md:text-[60px] font-display font-extrabold text-[#00305B] leading-[68px]">
@@ -91,7 +91,7 @@ export default function Canada() {
       {/* REGULATORY HUB SECTION (TABS) */}
       <section className="w-full bg-[#1D67CD] py-16 md:py-24 flex justify-center text-white border-b border-[#1552a8]">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 space-y-16">
-          
+
           {/* Tab buttons grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 border-b border-white/10 pb-8">
             {tabs.map((tab, idx) => (
@@ -111,7 +111,7 @@ export default function Canada() {
 
           {/* Tab content state swapper */}
           <div className="animate-in fade-in duration-300">
-            
+
             {/* Tab 0: Basics */}
             {activeTab === 0 && (
               <div className="space-y-16">
@@ -415,7 +415,7 @@ export default function Canada() {
             {/* Tab 8: Due Dates for filing of return */}
             {activeTab === 8 && (
               <div className="space-y-16">
-                
+
                 {/* Large Header Banner */}
                 <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-center items-center py-16 px-6 bg-slate-900/50">
                   <img
@@ -482,7 +482,7 @@ export default function Canada() {
             {/* Tab 10: Pricing */}
             {activeTab === 10 && (
               <div className="space-y-20">
-                
+
                 {/* Bookkeeping Services */}
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 border-b border-white/10 pb-12">
                   <div className="w-full lg:w-[500px] space-y-4">
@@ -561,11 +561,11 @@ export default function Canada() {
                   Connect with us
                 </h2>
                 <p className="text-[18px] text-[#BFD9ED] font-avenir leading-relaxed">
-                  Our professional Canada tax compliance desk is ready to assist you. 
+                  Our professional Canada tax compliance desk is ready to assist you.
                 </p>
                 <div>
                   <Link
-                    to="/contact-8"
+                    to="/contact"
                     className="px-8 py-3.5 rounded-full font-bold bg-[#A3D9F6] text-black shadow-md hover:bg-[#86c6e9] transition-all inline-block cursor-pointer font-display text-[15px]"
                   >
                     Contact BNC Global
@@ -582,7 +582,7 @@ export default function Canada() {
       {/* FOUNDERS & QUESTIONNAIRE SECTION */}
       <section className="w-full bg-[#F5FFF7] py-16 md:py-24 border-b border-slate-100 flex justify-center">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 space-y-20">
-          
+
           {/* Founders quote & Mission/Vision */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Founders quote card */}
@@ -627,7 +627,7 @@ export default function Canada() {
               </p>
               <div>
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="px-8 py-3.5 rounded-full font-bold bg-[#A3D9F6] hover:bg-[#86c6e9] text-black shadow-md active:scale-98 transition-all inline-block cursor-pointer text-[14px]"
                 >
                   Visit here

@@ -21,7 +21,7 @@ import includeLarge from '../assets/include_large.png'
 export default function Elevate() {
   return (
     <div className="bg-[#F5FFF7] text-slate-800 antialiased font-sans">
-      
+
       {/* SECTION 0: Hero Section */}
       <section className="w-full min-h-[546px] bg-white flex justify-center items-center py-12 md:py-0 border-b border-slate-100">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 flex flex-col lg:flex-row justify-between items-center gap-12">
@@ -41,7 +41,7 @@ export default function Elevate() {
                 Browse Programs
               </a>
               <Link
-                to="/contact-8"
+                to="/contact"
                 className="w-full sm:w-[205px] h-[40px] rounded-[5px] bg-[#A3D9F6] text-black hover:bg-[#86c6e9] active:scale-98 transition-all flex items-center justify-center font-avenir font-semibold text-[14px]"
               >
                 See Job Placements
@@ -344,13 +344,13 @@ export default function Elevate() {
       {/* SECTION 8: The Elevate Advantage */}
       <section className="w-full bg-white py-16 md:py-24 border-b border-slate-100 flex justify-center relative overflow-hidden">
         <div className="w-full max-w-[1122px] px-6 lg:px-0 flex flex-col lg:flex-row justify-between items-center gap-12 z-10">
-          
+
           {/* Left Column - Copy details */}
           <div className="w-full lg:w-[563px] space-y-8">
             <h2 className="text-[28px] font-serif font-normal text-black">
               The Elevate Advantage
             </h2>
-            
+
             <div className="space-y-6">
               {/* Item 1 */}
               <div className="text-[16px] leading-[24px] font-avenir text-slate-700">

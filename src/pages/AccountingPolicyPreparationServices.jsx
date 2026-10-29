@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import corridorImg from '../assets/india_saudi_corridor.png'
+import corridorImg from '../assets/india_saudi_corridor.webp'
 import policyPrep2 from '../assets/accounting_policy_prep_2.png'
 
 export default function AccountingPolicyPreparationServices() {
@@ -44,7 +44,7 @@ export default function AccountingPolicyPreparationServices() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-white py-12 md:py-16 border-b border-slate-100 min-h-[600px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export default function AccountingPolicyPreparationServices() {
               </div>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-blue-600 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
                 >
                   <span>Connect to us</span>

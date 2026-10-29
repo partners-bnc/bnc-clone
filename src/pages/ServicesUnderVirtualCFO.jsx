@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import corridorImg from '../assets/india_saudi_corridor.png'
+import corridorImg from '../assets/india_saudi_corridor.webp'
 
 export default function ServicesUnderVirtualCFO() {
   const subServices = [
@@ -56,7 +56,7 @@ export default function ServicesUnderVirtualCFO() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-[#1D67CD] text-white py-12 md:py-16 min-h-[500px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ export default function ServicesUnderVirtualCFO() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#00305B] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
                 >
                   <span>Connect Us</span>
@@ -94,7 +94,7 @@ export default function ServicesUnderVirtualCFO() {
       {/* 2. Strategy Formulation */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-4xl space-y-4">
             <h2 className="text-[30px] font-display font-extrabold text-slate-800 leading-snug">
               Strategy Formulation
@@ -127,7 +127,7 @@ export default function ServicesUnderVirtualCFO() {
       {/* 3. Leadership & Domain Expertise (Navy Background) */}
       <section className="py-16 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          
+
           <div className="max-w-3xl">
             <h2 className="text-[26px] md:text-[30px] font-display font-extrabold text-white leading-tight">
               Along with domain expertise as Supreme profession in field of Accounts and Finance, the Virtual chief financial Service Provider (CSP) should be expert at:
@@ -156,7 +156,7 @@ export default function ServicesUnderVirtualCFO() {
       {/* 4. Preferred Skills & Execution Mindset (White Background) */}
       <section className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-[32px] font-display font-extrabold text-slate-800 tracking-tight">
               CA Preferred Skills & Execution Mindset

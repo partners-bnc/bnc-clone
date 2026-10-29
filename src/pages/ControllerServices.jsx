@@ -15,7 +15,7 @@ export default function ControllerServices() {
     { name: 'Controller services', path: '/controller-services' },
     { name: 'Cost Analysis', path: '/cost-analysis' },
     { name: 'Customer & Vendor Reconciliation', path: '/customer-vendor-reconciliation' },
-    { name: 'Pay', path: '/pay' },
+    { name: 'Pay', path: '/payroll-reconciliation' },
     { name: 'Finance Advisory', path: '/finance-advisory' },
     { name: 'Digital Stock / Asset Verification', path: '/digital-stock-asset-verification' },
     { name: 'Create / Manage Your GCC In India', path: '/create-or-manage-your-gcc-in-india' }
@@ -38,12 +38,12 @@ export default function ControllerServices() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-[#00305B] to-[#0A2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl md:text-5xl font-display font-extrabold tracking-normal leading-tight">
@@ -54,7 +54,7 @@ export default function ControllerServices() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md transition-colors"
                 >
                   <span>Connect to us</span>
@@ -81,9 +81,9 @@ export default function ControllerServices() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={heroImg} 
-                alt="Controller hero illustration" 
+              <img
+                src={heroImg}
+                alt="Controller hero illustration"
                 className="w-full max-w-[440px] h-auto object-cover rounded-3xl"
               />
             </div>
@@ -94,7 +94,7 @@ export default function ControllerServices() {
       {/* 2. Services We Offer (White Background) */}
       <section id="services" className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-slate-600 font-avenir text-[16px] leading-relaxed">
@@ -114,9 +114,9 @@ export default function ControllerServices() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={servicesMapImg} 
-                alt="Controller Services Map illustration" 
+              <img
+                src={servicesMapImg}
+                alt="Controller Services Map illustration"
                 className="w-full max-w-[420px] h-auto rounded-3xl"
               />
             </div>
@@ -128,7 +128,7 @@ export default function ControllerServices() {
       {/* 3. Hierarchy (Navy Background) */}
       <section id="hierarchy" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
               Our Controllership Hierarchy
@@ -139,9 +139,9 @@ export default function ControllerServices() {
           </div>
 
           <div className="max-w-4xl mx-auto flex justify-center">
-            <img 
-              src={hierarchyImg} 
-              alt="Controller Hierarchy diagram" 
+            <img
+              src={hierarchyImg}
+              alt="Controller Hierarchy diagram"
               className="w-full max-w-[620px] h-auto rounded-3xl"
             />
           </div>
@@ -151,7 +151,7 @@ export default function ControllerServices() {
       {/* 4. Management Reporting (White Background) */}
       <section id="reporting" className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-slate-600 font-avenir text-[16px] leading-relaxed">
@@ -175,9 +175,9 @@ export default function ControllerServices() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={reportingImg} 
-                alt="Management reporting tools" 
+              <img
+                src={reportingImg}
+                alt="Management reporting tools"
                 className="w-full max-w-[360px] h-auto rounded-3xl"
               />
             </div>
@@ -189,7 +189,7 @@ export default function ControllerServices() {
       {/* 5. Management Accounting Services (Navy Background) */}
       <section id="accounting" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
               Management Accounting Outsourcing Scope
@@ -200,9 +200,9 @@ export default function ControllerServices() {
           </div>
 
           <div className="max-w-4xl mx-auto flex justify-center">
-            <img 
-              src={accountingServicesImg} 
-              alt="Accounting scope diagram" 
+            <img
+              src={accountingServicesImg}
+              alt="Accounting scope diagram"
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -212,15 +212,15 @@ export default function ControllerServices() {
       {/* 6. Why Choose Us (White Background) */}
       <section id="why" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
                 Reasons to Choose BnC for Management Accounting Consulting
               </h2>
-              
+
               <div className="space-y-6">
                 {[
                   { title: 'Understanding', desc: 'We deeply comprehend your project requirements, tailoring our services to your specific needs.' },
@@ -241,9 +241,9 @@ export default function ControllerServices() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={reasonsImg} 
-                alt="Why choose us graphic" 
+              <img
+                src={reasonsImg}
+                alt="Why choose us graphic"
                 className="w-full max-w-[360px] h-auto rounded-3xl"
               />
             </div>
@@ -256,7 +256,7 @@ export default function ControllerServices() {
       {/* 7. Other Outsourcing Services */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#1D67CD] tracking-tight">
               Other Outsourcing Services

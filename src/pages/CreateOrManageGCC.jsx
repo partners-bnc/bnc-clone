@@ -13,7 +13,7 @@ export default function CreateOrManageGCC() {
     { name: 'Controller services', path: '/controller-services' },
     { name: 'Cost Analysis', path: '/cost-analysis' },
     { name: 'Customer & Vendor Reconciliation', path: '/customer-vendor-reconciliation' },
-    { name: 'Pay', path: '/pay' },
+    { name: 'Pay', path: '/payroll-reconciliation' },
     { name: 'Finance Advisory', path: '/finance-advisory' },
     { name: 'Digital Stock / Asset Verification', path: '/digital-stock-asset-verification' },
     { name: 'Create / Manage Your GCC In India', path: '/create-or-manage-your-gcc-in-india' }
@@ -33,12 +33,12 @@ export default function CreateOrManageGCC() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-[#00305B] to-[#0A2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl md:text-5xl font-display font-extrabold tracking-normal leading-tight">
@@ -49,7 +49,7 @@ export default function CreateOrManageGCC() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md transition-colors"
                 >
                   <span>Connect to us</span>
@@ -76,9 +76,9 @@ export default function CreateOrManageGCC() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={heroImg} 
-                alt="GCC establishment hero corridor graphic" 
+              <img
+                src={heroImg}
+                alt="GCC establishment hero corridor graphic"
                 className="w-full max-w-[420px] h-auto object-cover rounded-3xl"
               />
             </div>
@@ -88,9 +88,9 @@ export default function CreateOrManageGCC() {
 
       {/* Banner Strip */}
       <div className="relative w-full h-[200px] overflow-hidden">
-        <img 
-          src={bannerImg} 
-          alt="Business Consultation Banner" 
+        <img
+          src={bannerImg}
+          alt="Business Consultation Banner"
           className="w-full h-full object-cover filter brightness-75"
         />
         <div className="absolute inset-0 bg-[#00305B]/30 flex items-center justify-center">
@@ -103,7 +103,7 @@ export default function CreateOrManageGCC() {
       {/* 2. Our GCC Services (White Background) */}
       <section id="services" className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Our GCC Setup & Operations Services
@@ -146,9 +146,9 @@ export default function CreateOrManageGCC() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center pt-8">
-            <img 
-              src={teamImg} 
-              alt="BNC Operations Team GCC diagram" 
+            <img
+              src={teamImg}
+              alt="BNC Operations Team GCC diagram"
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -159,7 +159,7 @@ export default function CreateOrManageGCC() {
       {/* 3. Why India? Why BNC Global? (Navy Background) */}
       <section id="why-india" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
               Why India? Why BNC Global?
@@ -187,9 +187,9 @@ export default function CreateOrManageGCC() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center pt-8">
-            <img 
-              src={frameworkImg} 
-              alt="BNC GCC operational framework diagram" 
+            <img
+              src={frameworkImg}
+              alt="BNC GCC operational framework diagram"
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -199,7 +199,7 @@ export default function CreateOrManageGCC() {
       {/* 4. Other Outsourcing Services */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#1D67CD] tracking-tight">
               Other Outsourcing Services

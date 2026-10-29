@@ -56,7 +56,7 @@ export default function CareersSubPage({ slug: propSlug }) {
   return (
     <div className="py-16 md:py-24 bg-white text-slate-800 antialiased font-sans">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 animate-in fade-in duration-300">
-        
+
         {/* Back Link */}
         <Link
           to="/careers"
@@ -103,7 +103,7 @@ export default function CareersSubPage({ slug: propSlug }) {
           </p>
           <div>
             <Link
-              to="/contact-8"
+              to="/contact"
               className="px-8 py-3 rounded-full font-bold bg-[#1D67CD] hover:bg-blue-600 text-white shadow-md active:scale-98 transition-colors inline-block cursor-pointer"
             >
               Get in Touch

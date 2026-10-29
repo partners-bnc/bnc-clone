@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
+import ServiceAnswers from '../seo/ServiceAnswers'
 
 export default function Layout() {
   return (
@@ -14,6 +15,7 @@ export default function Layout() {
       <Header />
       <main id="main-content" tabIndex={-1} className="flex-grow outline-none">
         <Outlet />
+        <ServiceAnswers />
       </main>
       <Footer />
     </div>

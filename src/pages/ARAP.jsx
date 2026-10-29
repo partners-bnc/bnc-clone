@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
 import heroBg from '../assets/ar_ap_hero_bg.jpg'
 import arApImg1 from '../assets/ar_ap_management_1.png'
-import arApImg2 from '../assets/ar_ap_management_2.png'
+import arApImg2 from '../assets/ar_ap_management_2.webp'
 
 export default function ARAP() {
   const subServices = [
@@ -85,14 +85,14 @@ export default function ARAP() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="relative w-full py-24 md:py-32 min-h-[500px] flex items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#00305B]/85" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-6">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-normal leading-tight max-w-5xl mx-auto">
             Accounts Receivable & Accounts Payable Outsourcing
@@ -102,7 +102,7 @@ export default function ARAP() {
           </p>
           <div className="pt-4">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
             >
               <span>Connect to us</span>
@@ -115,7 +115,7 @@ export default function ARAP() {
       {/* 2. Intro Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Info */}
             <div className="lg:col-span-7 space-y-6">
@@ -134,12 +134,12 @@ export default function ARAP() {
                 </p>
               </div>
             </div>
-            
+
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={arApImg1} 
-                alt="AR AP Management Diagram" 
+              <img
+                src={arApImg1}
+                alt="AR AP Management Diagram"
                 className="w-full max-w-[450px] h-auto rounded-3xl shadow-lg object-cover"
               />
             </div>
@@ -166,7 +166,7 @@ export default function ARAP() {
       {/* 3. Accounts Receivable Services (Navy Background) */}
       <section className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-3xl">
             <h2 className="text-[28px] md:text-[36px] font-display font-extrabold text-white leading-tight">
               Our comprehensive range of accounts receivable outsourcing services encompasses:
@@ -175,7 +175,7 @@ export default function ARAP() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {arServices.map((point, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-3.5 hover:bg-white/10 hover:border-white/20 transition-all"
               >
@@ -195,7 +195,7 @@ export default function ARAP() {
       {/* 4. Accounts Payable Services (White Background) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-[28px] md:text-[36px] font-display font-extrabold text-slate-800 tracking-tight leading-tight">
               Our comprehensive range of accounts payable outsourcing services encompasses:
@@ -205,7 +205,7 @@ export default function ARAP() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {apServices.map((service, idx) => (
-              <div 
+              <div
                 key={idx}
                 className={`bg-slate-50 border border-slate-200 rounded-3xl p-6 hover:shadow-md transition-shadow flex flex-col justify-between ${service.isProblemResolution ? 'lg:col-span-2 bg-[#F5FFF7] border-[#ACD6E8]' : ''}`}
               >
@@ -219,7 +219,7 @@ export default function ARAP() {
                   <p className="text-slate-600 font-sans text-[15px] leading-relaxed">
                     {service.desc}
                   </p>
-                  
+
                   {/* Embedded Problem Resolution Sub-list */}
                   {service.isProblemResolution && (
                     <div className="mt-4 bg-white border border-[#ACD6E8] p-5 rounded-2xl space-y-3.5">
@@ -253,9 +253,9 @@ export default function ARAP() {
               </p>
             </div>
             <div className="md:w-2/5 w-full">
-              <img 
-                src={arApImg2} 
-                alt="AR AP Flow Optimization" 
+              <img
+                src={arApImg2}
+                alt="AR AP Flow Optimization"
                 className="w-full h-full object-cover min-h-[250px] md:min-h-[300px]"
               />
             </div>

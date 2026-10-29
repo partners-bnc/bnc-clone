@@ -1,32 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronUp, ChevronDown, Search, ChevronLeft, ChevronRight, X } from 'lucide-react'
-import SEO from '../components/SEO'
-import corridorImg from '../assets/india_saudi_corridor.png'
+import corridorImg from '../assets/india_saudi_corridor.webp'
 
-const homeSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'BNC Global Consultech',
-  url: 'https://www.bncglobal.in',
-  logo: 'https://www.bncglobal.in/logo.png',
-  description: 'BNC Global provides specialized Risk & Management Consulting, Accounting Outsourcing, Virtual CFO, and Tax Advisory services.',
-  telephone: '+919810575613',
-  email: 'info@bncglobal.in',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'IN',
-  },
-  sameAs: [
-    'https://www.linkedin.com/company/bnc-global-consulteck/',
-    'https://www.instagram.com/bncglobal.in/',
-    'https://www.facebook.com/bncglobal.in/',
-    'https://www.youtube.com/@bncglobalconsultech',
-  ],
-}
-import reviewImg from '../assets/reviewing_financial_reports.png'
-import iconAccounting from '../assets/icon_accounting.png'
-import iconTax from '../assets/icon_tax.png'
+import reviewImg from '../assets/reviewing_financial_reports.webp'
+import iconAccounting from '../assets/icon_accounting.webp'
+import iconTax from '../assets/icon_tax.webp'
 import iconAdvisory from '../assets/icon_advisory.png'
 
 export default function Home() {
@@ -140,17 +119,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-slate-800 antialiased font-sans">
-      <SEO
-        title="Risk & Management Consulting"
-        description="BNC Global delivers boardroom-ready Virtual CFO support, outsourced bookkeeping, payroll, and corporate tax compliance services."
-        canonical="/"
-        jsonLd={homeSchema}
-      />
-      
+
+
+      <section className="mx-auto max-w-6xl px-6 pt-8"><p>BNC Global provides outsourced accounting, bookkeeping, payroll, tax support and virtual CFO services. Businesses can engage the team for operational finance support and strategic financial guidance, with scope agreed around their requirements.</p></section>
       {/* 1. Hero Video Section (Centered Video Player with exact live site margins) */}
       <section className="relative w-full bg-white">
         <div className="max-w-[1296px] mx-auto aspect-video mt-[25px] mb-[33px] overflow-hidden">
           <video
+            preload="none"
             src="https://bvvqyjqokvnttbgyjkrt.supabase.co/storage/v1/object/public/video_bnc.in/file.mp4"
             autoPlay
             loop
@@ -175,7 +151,7 @@ export default function Home() {
 
         {/* Carousel Content */}
         <div className="relative z-10 w-full max-w-5xl mx-auto px-6 flex items-center justify-between gap-4">
-          
+
           {/* Previous Arrow */}
           <button
             onClick={prevSlide}
@@ -191,7 +167,7 @@ export default function Home() {
               className="font-display text-[32px] sm:text-[45px] font-extrabold text-[#F5FFF7] tracking-normal text-left"
               style={{ lineHeight: '81px' }}
             >
-              {slides[currentSlide].title}
+              Outsourced Accounting & Virtual CFO Services
             </h1>
             <p
               className="font-sans text-[16px] sm:text-[19px] font-normal text-[#F5FFF7] max-w-2xl text-left min-h-[4.5rem]"
@@ -199,7 +175,7 @@ export default function Home() {
             >
               {slides[currentSlide].desc}
             </p>
-            
+
             {slides[currentSlide].showButtons && (
               <div className="flex flex-row justify-start gap-4 pt-4">
                 <Link
@@ -321,7 +297,7 @@ export default function Home() {
       {/* 4. FAQ Section */}
       <section className="py-24 bg-[#1D67CD] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/20 pb-8">
             <div className="space-y-4">
               <h2 className="font-serif text-[28px] sm:text-[32px] font-normal text-[#F5FFF7] leading-[38.4px] tracking-tight">
@@ -398,7 +374,7 @@ export default function Home() {
       {showDpdpaModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-300">
           <div className="relative w-full max-w-[835px] h-[645px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-none mx-4">
-            
+
             {/* Close Button top right */}
             <button
               onClick={closeDpdpaModal}
@@ -438,7 +414,7 @@ export default function Home() {
                     className="w-full px-4 py-3 border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 transition-colors text-base"
                   />
                 </div>
-                
+
                 <div className="flex gap-4 pt-2">
                   <button
                     type="submit"

@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
-import servicesHero from '../assets/services_hero.jpg'
-import servicesFooter from '../assets/services_footer.jpg'
-import iconCyber from '../assets/icon_cyber.png'
-import iconEsg from '../assets/icon_esg.png'
+import servicesHero from '../assets/services_hero.webp'
+import servicesFooter from '../assets/services_footer.webp'
+import iconCyber from '../assets/icon_cyber.webp'
+import iconEsg from '../assets/icon_esg.webp'
 import iconCfo from '../assets/icon_cfo.png'
-import iconAccounting from '../assets/icon_accounting.png'
-import iconTax from '../assets/icon_tax.png'
+import iconAccounting from '../assets/icon_accounting.webp'
+import iconTax from '../assets/icon_tax.webp'
 import iconAdvisory from '../assets/icon_advisory.png'
-import iconInventory from '../assets/icon_inventory.png'
-import SEO from '../components/SEO'
+import iconInventory from '../assets/icon_inventory.webp'
 
 export default function Services() {
   const categories = [
@@ -44,7 +43,7 @@ export default function Services() {
       desc: 'BNC Global delivers end-to-end tax compliance and outsourcing services across multiple jurisdictions, helping individuals and organisations navigate complex tax regulations with confidence and accuracy.',
       icon: iconTax,
       darkTheme: true,
-      path: '/income-tax-service-soutsourcing'
+      path: '/income-tax-outsourcing'
     },
     {
       title: 'Finance Advisory',
@@ -71,12 +70,8 @@ export default function Services() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      <SEO
-        title="BNC Global Services - Consulting & Compliance"
-        description="Discover BNC Global Services: Cybersecurity, Virtual CFO, ESG Advisory, Tax & Accounting Outsourcing, and Corporate Governance."
-        canonical="/bnc-global-services"
-      />
-      
+
+
       {/* 1. Hero Banner */}
       <section className="relative py-28 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -132,7 +127,7 @@ export default function Services() {
 
                 <div className="pt-6">
                   <Link
-                    to={cat.path || '/contact-8'}
+                    to={cat.path || '/contact'}
                     className={`inline-flex items-center gap-1 text-[14px] font-bold hover:underline ${
                       cat.darkTheme ? 'text-[#F5FFF7]' : 'text-[#1D67CD]'
                     }`}
@@ -167,7 +162,7 @@ export default function Services() {
           </p>
           <div className="pt-4">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="px-8 py-3 rounded-full font-bold bg-[#1D67CD] hover:bg-blue-600 text-white shadow-md transition-colors inline-block"
             >
               Contact Us

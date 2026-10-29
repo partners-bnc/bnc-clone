@@ -1,0 +1,463 @@
+{
+  "name": "BNC Global",
+  "origin": "https://www.bncglobal.in",
+  "logo": "/logo.png",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Outsourced Accounting & Virtual CFO Services",
+      "description": "BNC Global provides outsourced accounting, bookkeeping, payroll, tax support and virtual CFO services. Contact the team to discuss your business requirements.",
+      "type": "page"
+    },
+    {
+      "path": "/virtual-cfo",
+      "title": "Virtual CFO Services",
+      "description": "We have a Pan-India network of experienced Virtual CFOs, providing strategic financial leadership without the cost of a full-time, in-house CFO.",
+      "type": "service"
+    },
+    {
+      "path": "/accounting-policy-preparation-services",
+      "title": "Accounting Policy Preparation Services",
+      "description": "Our Accounting Policy Preparation services encompass the creation and documentation of a company's accounting policies and procedures, ensuring compliance with pertinent accounting standards and regulations.",
+      "type": "service"
+    },
+    {
+      "path": "/capital-budgeting",
+      "title": "Capital Budgeting Analysis Services",
+      "description": "Evaluating potential long-term investments to determine whether they are financially viable and worth pursuing.",
+      "type": "service"
+    },
+    {
+      "path": "/internal-control",
+      "title": "Internal Control Consulting Services - Risk Management Service",
+      "description": "Helping companies identify and mitigate potential risks that may impact their operations.",
+      "type": "service"
+    },
+    {
+      "path": "/services-under-virtual-cfo",
+      "title": "Services Under Virtual CFO",
+      "description": "A virtual CFO works remotely and provides a wide range of financial services, including financial analysis and planning, cash flow management, budgeting and forecasting, financial reporting, risk…",
+      "type": "service"
+    },
+    {
+      "path": "/specific-cfo-services",
+      "title": "Specific CFO Services",
+      "description": "Don't overload your CFO with requests when BnC can assist you with a part-time CFO.",
+      "type": "service"
+    },
+    {
+      "path": "/working-capital-management-services",
+      "title": "Working Capital Management Services",
+      "description": "The management of an organization's short-term assets and liabilities to ensure that it has sufficient liquidity to meet its financial obligations.",
+      "type": "service"
+    },
+    {
+      "path": "/accounting",
+      "title": "Accounting Services",
+      "description": "Diversifying portfolios, sharpening expertise, and providing unique outsourced accounting services to small businesses.",
+      "type": "service"
+    },
+    {
+      "path": "/ar-ap",
+      "title": "Accounts Receivable & Accounts Payable Outsourcing",
+      "description": "Streamline your cash flow, optimize invoice processing, and maintain flawless financial relations.",
+      "type": "service"
+    },
+    {
+      "path": "/inventory-management",
+      "title": "Inventory Management",
+      "description": "Premier provider of cost-effective, real-time inventory management outsourcing services.",
+      "type": "service"
+    },
+    {
+      "path": "/year-end-accounting",
+      "title": "Year End Accounting",
+      "description": "Specialized closure, ledger finalization, and compliance mapping services to bring control to your fiscal wrap-up.",
+      "type": "service"
+    },
+    {
+      "path": "/audit-support-service",
+      "title": "Audit Support Service",
+      "description": "Outsourced Auditing Services for CPA and Accounting Companies to meet stringent deadlines with precision.",
+      "type": "service"
+    },
+    {
+      "path": "/outsourced-tax-preparation",
+      "title": "Outsourced Tax Preparation",
+      "description": "Exceptional tax preparation outsourcing services to CPAs, EAs, Accounting, and Tax Firms across the USA.",
+      "type": "service"
+    },
+    {
+      "path": "/payroll-processing",
+      "title": "Payroll Outsourcing Services",
+      "description": "Superior payroll administration, accurate calculations, and complete compliance for diverse business sectors.",
+      "type": "service"
+    },
+    {
+      "path": "/bookkeeping",
+      "title": "Book-Keeping Services",
+      "description": "Tailored bookkeeping outsourcing services to meet the operational needs of small and medium-sized businesses.",
+      "type": "service"
+    },
+    {
+      "path": "/quickbooks",
+      "title": "Quickbooks Bookkeeping Services",
+      "description": "Efficient QuickBooks Accounting, custom environment setup, and certified advisory services.",
+      "type": "service"
+    },
+    {
+      "path": "/virtual-accounting",
+      "title": "Virtual Accounting Services - Cloud Accounting Services",
+      "description": "Leading virtual bookkeeping and cloud-based financial controllership designed for SME expansion.",
+      "type": "service"
+    },
+    {
+      "path": "/financial-statement-preparation-services",
+      "title": "Financial Statement Preparation Services",
+      "description": "Precision US GAAP and IFRS statement crafting, audit support, and consolidation.",
+      "type": "service"
+    },
+    {
+      "path": "/xero-accounting",
+      "title": "XERO Setup, Accounting, and Book-keeping Services",
+      "description": "Harnessing cloud automation to deliver complete visibility into your company's financial information.",
+      "type": "service"
+    },
+    {
+      "path": "/income-tax-outsourcing",
+      "title": "Tax Outsourcing Services",
+      "description": "BNC Global offers Income tax preparation and submission of online Tax returns for Individuals, Corporations and most of the tax filing entities globally.",
+      "type": "service"
+    },
+    {
+      "path": "/accounts-outsourcing",
+      "title": "Account Outsourcing",
+      "description": "Strategic delegation of finance functions to external experts, optimizing resource allocation and data accuracy.",
+      "type": "service"
+    },
+    {
+      "path": "/bank-card-reconciliations",
+      "title": "Bank & Cards Reconciliations",
+      "description": "We make your finances and cash flow processes easier through our bank and credit card reconciliation services.",
+      "type": "service"
+    },
+    {
+      "path": "/business-analysis",
+      "title": "Business Analysis",
+      "description": "BnC stands out as a premier provider of business analytics services, empowering you to analyze both structured and unstructured data in real time.",
+      "type": "service"
+    },
+    {
+      "path": "/control-account-reconciliations",
+      "title": "Control Account Reconciliations",
+      "description": "Detecting errors or discrepancies in records and ensuring financial statements accurately reflect financial positions.",
+      "type": "service"
+    },
+    {
+      "path": "/controller-services",
+      "title": "Controller Services",
+      "description": "Deliver precise, timely, and dependable financial data and assistance, empowering sound and efficient decision-making.",
+      "type": "service"
+    },
+    {
+      "path": "/cost-analysis",
+      "title": "Cost Analysis",
+      "description": "We have a perfect solution to maximize your profitability with high-quality services.",
+      "type": "service"
+    },
+    {
+      "path": "/customer-vendor-reconciliation",
+      "title": "Customer & Vendor Reconciliation",
+      "description": "Vendor payments are a significant financial outflow for any firm, thus vendor reconciliation is done to make operations easier.",
+      "type": "service"
+    },
+    {
+      "path": "/payroll-reconciliation",
+      "title": "Payroll Reconciliation",
+      "description": "Meticulously compare the contents of your payroll register with the intended payouts to employees, ensuring alignment and accuracy.",
+      "type": "service"
+    },
+    {
+      "path": "/finance-advisory",
+      "title": "Finance Advisory Services",
+      "description": "We offer end-to-end financial advisory services designed to help organisations strengthen financial performance, manage risk, and remain compliant in a constantly evolving regulatory landscape.",
+      "type": "service"
+    },
+    {
+      "path": "/digital-stock-asset-verification",
+      "title": "Digital Stock & Asset Verification",
+      "description": "Turn verification into intelligence — simplify, digitize, and stay compliant. Redefining Inventory Verification Through Smart Solutions.",
+      "type": "service"
+    },
+    {
+      "path": "/create-or-manage-your-gcc-in-india",
+      "title": "Global Capability Centers (GCC)",
+      "description": "Set Up and Manage Your Global Capability Center (GCC) in India. Build. Operate. Scale. Succeed — with BNC Global.",
+      "type": "service"
+    },
+    {
+      "path": "/about-us/meet-our-team",
+      "title": "Meet Our Team",
+      "description": "Our multi-disciplinary experts bring global consulting, risk assurance, and compliance experience to guide your organization scaling.",
+      "type": "page"
+    },
+    {
+      "path": "/bnc-global-services",
+      "title": "Your Trusted Partner for Finance, Compliance & Growth",
+      "description": "BNC Global Services is a multidisciplinary professional services firm supporting businesses across finance, compliance, risk, technology, and talent.",
+      "type": "page"
+    },
+    {
+      "path": "/about-us",
+      "title": "About Us",
+      "description": "BNC Global Consulteck is a contemporary consulting and advisory firm, embodying the spirit of innovation and modernity. We represent the future of business support services, specialization in risk advisory,…",
+      "type": "page"
+    },
+    {
+      "path": "/contact",
+      "title": "CONTACT US!",
+      "description": "8163 Abi Barzah Al Aslami, 4362 Al Dhubbat Dist. Riyadh, 12623, Saudi Arabia",
+      "type": "page"
+    },
+    {
+      "path": "/privacy-policy",
+      "title": "Privacy Policy",
+      "description": "BNC Global Consultech Pvt. Ltd. is committed to protecting the financial records and metadata shared by our clients during bookkeeping, advisory, and tax operations. All client ledgers, bank transactions,…",
+      "type": "page"
+    },
+    {
+      "path": "/careers",
+      "title": "Career",
+      "description": "Your journey at BNC promises a unique blend of experiences, allowing you to collaborate with both industry-leading giants, including the BIG 4 firms, and our own BNC team. This dual exposure provides a rich…",
+      "type": "page"
+    },
+    {
+      "path": "/cybersecurity",
+      "title": "Compliance. Cyber-Secure. Globally Assured.",
+      "description": "At BNC Global ( BNC Data Privacy ), we empower organisations to protect what matters most — their data.",
+      "type": "service"
+    },
+    {
+      "path": "/blog",
+      "title": "BNC Global Ties with Saudi Arabia",
+      "description": "With over 15 years of operations, 500+ projects, and 50+ clients across 8 cities, BNC Global is a trusted partner in Saudi Arabia — driving growth aligned with Saudi Vision 2030.",
+      "type": "page"
+    },
+    {
+      "path": "/elevate",
+      "title": "Get Trained. Get Certified. Get Hired.",
+      "description": "The only L&D provider in India and Saudi Arabia that doesn’t just make you job-ready—we get you the job. Master Internal Audit, ESG, Cybersecurity, and Business Operations in 2 hours to 2 days, then let our…",
+      "type": "page"
+    },
+    {
+      "path": "/transforming-professionals",
+      "title": "Elevating Professionals, Transforming Organizations",
+      "description": "Founded by the team behind BnC Global—a trusted consulting firm serving 500+ clients across India and Saudi Arabia—Elevate was born from a simple observation: the best learning happens at the intersection…",
+      "type": "page"
+    },
+    {
+      "path": "/communities",
+      "title": "Communities",
+      "description": "Join our profile-specific WhatsApp communities now to receive real-time updates on new opportunities with BNC.",
+      "type": "page"
+    },
+    {
+      "path": "/countries-we-serve/australia",
+      "title": "Outsourcing Services For AUSTRALIA",
+      "description": "Outsourcing services involves the practice of enlisting external companies or individuals to perform tasks or services that would typically be handled by in-house staff. These outsourced functions can…",
+      "type": "service"
+    },
+    {
+      "path": "/countries-we-serve/canada",
+      "title": "Outsourcing Services for Canada",
+      "description": "Outsourcing services refer to the practice of hiring external companies or individuals to perform tasks or services that would otherwise be handled by in-house staff. This can include functions such as…",
+      "type": "service"
+    },
+    {
+      "path": "/countries-we-serve/saudi-arabia",
+      "title": "Connect with BNC Global to Shape the Next Wave of Innovation in Saudi Arabia",
+      "description": "At BNC Global, we empower businesses to drive digital transformation, innovation, and market expansion across Saudi Arabia. With expertise in accounting, risk consulting, ESG strategies, cyber security, and…",
+      "type": "service"
+    },
+    {
+      "path": "/countries-we-serve/uae",
+      "title": "Taxation Laws in UAE",
+      "description": "Understand the tax framework, compliance requirements, and business setup essentials for operating in the United Arab Emirates.",
+      "type": "service"
+    },
+    {
+      "path": "/blog/cybersecurity-in-saudi-arabia-business-risks-in-2026",
+      "title": "Cybersecurity in Saudi Arabia: Business Risks in 2026",
+      "description": "Discover how AI-driven cyber threats are changing business security in Saudi Arabia and explore practical ways to protect data, reduce risks, and build cyber resilience.",
+      "type": "post",
+      "author": "keshav kumar",
+      "published": "2026-10-26 00:00",
+      "modified": "2026-10-26T12:03:13.341Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/07d2c2ac32/99.png"
+    },
+    {
+      "path": "/blog/september-2026-zatca-tax-deadlines-a-compliance-guide-for-businesses-in-saudi-arabia",
+      "title": "September 2026 ZATCA Tax Deadlines: A Compliance Guide for Businesses in Saudi Arabia",
+      "description": "Stay updated on Saudi Arabia’s September 2026 ZATCA tax deadlines for VAT, Withholding Tax and Excise Tax. Learn key compliance requirements and preparation tips for businesses.",
+      "type": "post",
+      "author": "Keshav ",
+      "published": "2026-10-23 00:00",
+      "modified": "2026-10-23T10:48:00.453Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/8786fc773f/yoyo.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-vat-rules-2026-zatca-s-deemed-supplier-guidance",
+      "title": "Saudi Arabia VAT Rules 2026: ZATCA’s Deemed Supplier Guidance",
+      "description": "Learn how ZATCA’s 2026 deemed supplier VAT rules affect Saudi Arabia’s digital marketplaces, including VAT collection, invoicing, reporting and compliance preparation.",
+      "type": "post",
+      "author": "Keshav Sood",
+      "published": "2026-10-16 00:00",
+      "modified": "2026-10-21T10:28:57.613Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/c1f451dcb4/are.png"
+    },
+    {
+      "path": "/blog/ifrs-19-explained-simplified-disclosure-requirements-for-eligible-subsidiaries",
+      "title": "IFRS 19 Explained: Simplified Disclosure Requirements for Eligible Subsidiaries",
+      "description": "Explore IFRS 19, its eligibility criteria, reduced disclosure requirements, business benefits and implementation considerations for subsidiaries.\n",
+      "type": "post",
+      "author": "Keshav Kumar",
+      "published": "2026-10-14 00:00",
+      "modified": "2026-10-15T12:01:41.938Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/5ff7284568/blog-cover-img.png"
+    },
+    {
+      "path": "/blog/overseas-payments-in-saudi-arabia-a-business-documentation-guide",
+      "title": " Overseas Payments in Saudi Arabia: A Business Documentation Guide",
+      "description": "Learn how Saudi businesses can document international supplier payments, manage VAT and withholding tax considerations, and maintain records for compliance.",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-10-06 00:00",
+      "modified": "2026-10-06T09:44:11.329Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/8151e9289a/seo-blog-cover-image.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-s-new-government-tenders-and-procurement-law-what-contractors-and-the-surety-market-need-to-know",
+      "title": "Saudi Arabia’s New Government Tenders and Procurement Law: What Contractors and the Surety Market Need to Know",
+      "description": "Saudi Arabia’s new Government Tenders and Procurement Law under Royal Decree No. M/76 introduces major changes to procurement, contracting, payments, direct purchases and contract administration. Here’s…",
+      "type": "post",
+      "author": "Divya Sindhi ",
+      "published": "2026-09-29 00:00",
+      "modified": "2026-09-29T09:52:25.671Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/a5d0ad06d5/untitled-design-3.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-e-invoicing-compliance-why-phase-2-is-now-a-business-continuity-issu",
+      "title": "Saudi Arabia E-Invoicing Compliance: Why Phase 2 Is Now a Business Continuity Issue",
+      "description": "Saudi Arabia’s ZATCA e-invoicing Phase 2 is expanding to smaller\nbusinesses. Learn what the February 1, 2027 deadline means and how finance and IT\nteams should prepare\n",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-09-29 00:00",
+      "modified": "2026-09-29T09:27:41.994Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/fbd9fe076e/untitled-design-2.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-e-invoicing-wave-25-requirements-deadline-2027",
+      "title": "Saudi Arabia E-Invoicing Wave 25: Requirements & Deadline 2027",
+      "description": "Saudi Arabia’s ZATCA Wave 25 expands e-invoicing to businesses exceeding SAR 187,500 in VAT-subject revenue. Learn about requirements, Fatoora integration and the 2027 deadline.",
+      "type": "post",
+      "author": "Divya Sindhi ",
+      "published": "2026-09-25 00:00",
+      "modified": "2026-09-25T10:15:06.287Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/7c48ffdb67/untitled-design-1.png"
+    },
+    {
+      "path": "/blog/internal-audit-in-saudi-arabia-7-emerging-risks-businesses-should-watch",
+      "title": " Internal Audit in Saudi Arabia: 7 Emerging Risks Businesses Should Watch",
+      "description": " Discover seven emerging internal audit risks in Saudi Arabia, from cybersecurity and AI to third-party suppliers, procurement, compliance, financial controls and major projects.",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-09-24 00:00",
+      "modified": "2026-09-24T06:35:10.757Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/d9ebd80a05/untitled-design.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-s-new-sme-strategy-what-businesses-need-to-know",
+      "title": "Saudi Arabia’s New SME Strategy: What Businesses Need to Know",
+      "description": "Saudi Arabia’s new SME strategy sets 13 initiatives to strengthen SME finance, market access, innovation, exports and growth through 2030.",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-09-21 12:00",
+      "modified": "2026-09-21T12:10:31.279Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/1887517500/untitled-design.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-vat-e-invoicing-2026-what-indian-businesses-need-to-know",
+      "title": "Saudi Arabia VAT & E-Invoicing 2026: What Indian Businesses Need to Know",
+      "description": "Understand Saudi Arabia’s 2026 VAT and e-invoicing requirements for Indian businesses, including ZATCA FATOORA, Phase Two and ERP compliance.",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-09-15 00:00",
+      "modified": "2026-09-15T11:04:07.394Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/559e9226a7/untitled-design.png"
+    },
+    {
+      "path": "/blog/saudi-arabia-vat-and-withholding-tax-compliance",
+      "title": "Saudi Arabia VAT & WHT Compliance Guide for Businesses 2026",
+      "description": "Understand Saudi Arabia VAT and withholding tax compliance, filing deadlines, penalties, documentation and practical steps businesses can take to reduce tax risks.",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-09-15 00:00",
+      "modified": "2026-09-15T07:23:26.494Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/d8f9ec50e4/vat-applies-to-taxable-transactions-and-supplies-with-reviews-focused-on-output-vat-input-vat-and-invoices-returns-must-be-filed-according-to-the-applicable-filing-period-supported-by-tax-invoices-accounting-records-and-reconciliations-common-risks-include-incorrect-vat-treatment-and-late-filing-or-payment-wht-applies-to-certain-payments-made-to-non-residents-businesses-must-review-the-nature-of-the-payment-the-recipient-s-status-and-the-applicable-rate-monthly-wht-requirements-should-be-supported-by-contracts-invoices-residency-documents-and-payment-records-common-risks-include-failure-to-deduct-wht-or-applying-an-incorrect-rate.png"
+    },
+    {
+      "path": "/blog/internal-controls-for-growing-saudi-businesses-key-risks-benefits-and-best-practices",
+      "title": "Internal Controls for Growing Saudi Businesses: Key Risks, Benefits and Best Practices",
+      "description": "Learn how growing businesses in Saudi Arabia can strengthen internal controls, manage financial risks, improve accountability and build scalable governance processes.",
+      "type": "post",
+      "author": "Divya Sindhi",
+      "published": "2026-09-10 12:40",
+      "modified": "2026-09-10T07:14:31.713Z",
+      "image": "https://a.storyblok.com/f/294961171213522/1920x1080/7677b4f89b/untitled-design.png"
+    },
+    {
+      "path": "/blog/what-is-an-esg-score-and-how-is-it-calculated",
+      "title": "What Is an ESG Score and How Is It Calculated?",
+      "description": "A practical introduction to the environmental, social, and governance signals behind an organisation’s sustainability profile.",
+      "type": "post",
+      "author": "Sustaind Editorial",
+      "published": "2026-04-22 09:00",
+      "modified": "2026-09-02T15:05:25.397Z",
+      "image": "/blog-img.webp"
+    },
+    {
+      "path": "/blog/verra-or-gold-standard-choosing-the-right-registry-for-your-carbon-project",
+      "title": "Verra or Gold Standard? Choosing the Right Registry for Your Carbon Project",
+      "description": "The right registry can shape your project’s credibility, buyer fit, economics, and long-term sustainability story.",
+      "type": "post",
+      "author": "Dolly Soni",
+      "published": "2026-05-07 09:00",
+      "modified": "2026-09-02T14:47:11.953Z",
+      "image": "/hero-img.webp"
+    }
+  ],
+  "redirects": {
+    "/bookeeping": "/bookkeeping",
+    "/financial-statment-preparation-services": "/financial-statement-preparation-services",
+    "/income-tax-service-soutsourcing": "/income-tax-outsourcing",
+    "/outsouced-tax-preparation": "/outsourced-tax-preparation",
+    "/pay": "/payroll-reconciliation",
+    "/year-end": "/year-end-accounting",
+    "/contact-8": "/contact",
+    "/outsourcing": "/accounts-outsourcing",
+    "/countires-we-serve/australia": "/countries-we-serve/australia",
+    "/countires-we-serve/canada": "/countries-we-serve/canada",
+    "/countires-we-serve/saudi-arabia": "/countries-we-serve/saudi-arabia",
+    "/countires-we-serve/uae": "/countries-we-serve/uae",
+    "/careers/elevate": "/elevate",
+    "/careers/transforming-professionals": "/transforming-professionals",
+    "/careers/communities": "/communities"
+  },
+  "privateRoutes": [],
+  "sameAs": [
+    "https://www.linkedin.com/company/bnc-global-consulteck/",
+    "https://www.instagram.com/bncglobal.in/",
+    "https://www.facebook.com/bncglobal.in/",
+    "https://www.youtube.com/@bncglobalconsultech"
+  ]
+}

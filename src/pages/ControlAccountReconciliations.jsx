@@ -20,7 +20,7 @@ export default function ControlAccountReconciliations() {
     { name: 'Controller services', path: '/controller-services' },
     { name: 'Cost Analysis', path: '/cost-analysis' },
     { name: 'Customer & Vendor Reconciliation', path: '/customer-vendor-reconciliation' },
-    { name: 'Pay', path: '/pay' },
+    { name: 'Pay', path: '/payroll-reconciliation' },
     { name: 'Finance Advisory', path: '/finance-advisory' },
     { name: 'Digital Stock / Asset Verification', path: '/digital-stock-asset-verification' },
     { name: 'Create / Manage Your GCC In India', path: '/create-or-manage-your-gcc-in-india' }
@@ -42,12 +42,12 @@ export default function ControlAccountReconciliations() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-[#00305B] to-[#0A2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl md:text-5xl font-display font-extrabold tracking-normal leading-tight">
@@ -58,7 +58,7 @@ export default function ControlAccountReconciliations() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md transition-colors"
                 >
                   <span>Connect to us</span>
@@ -85,9 +85,9 @@ export default function ControlAccountReconciliations() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={heroImg} 
-                alt="Control account hero illustration" 
+              <img
+                src={heroImg}
+                alt="Control account hero illustration"
                 className="w-full max-w-[420px] h-auto object-cover rounded-3xl"
               />
             </div>
@@ -98,7 +98,7 @@ export default function ControlAccountReconciliations() {
       {/* 2. Our Services (White Background) */}
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Reconciliation Services We Render
@@ -125,9 +125,9 @@ export default function ControlAccountReconciliations() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center pt-6">
-            <img 
-              src={servicesImg} 
-              alt="Services grid graphic" 
+            <img
+              src={servicesImg}
+              alt="Services grid graphic"
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -138,7 +138,7 @@ export default function ControlAccountReconciliations() {
       {/* 3. Our Capabilities (Navy Background) */}
       <section id="capabilities" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
               Our Capabilities
@@ -155,7 +155,7 @@ export default function ControlAccountReconciliations() {
                 Efficient bank account reconciliation plays a pivotal role in enabling auditors to ascertain the accuracy of a company's financial statements and ensure compliance with regulatory standards. Given the substantial workload and expertise required, outsourcing your account reconciliation is a prudent choice.
               </p>
               <p>
-                This is precisely where BnC steps in, offering a comprehensive suite of services tailored to meet your needs. Our team comprises seasoned experts proficient in the intricacies of account reconciliations, guaranteeing secure and reliable services. 
+                This is precisely where BnC steps in, offering a comprehensive suite of services tailored to meet your needs. Our team comprises seasoned experts proficient in the intricacies of account reconciliations, guaranteeing secure and reliable services.
               </p>
               <p className="font-bold text-white">
                 By partnering with us, you stand to benefit from reduced administrative and account-related expenses. Additionally, we leverage cutting-edge technological software for our reconciliation services, ensuring that you have access to the latest advancements in the field.
@@ -171,9 +171,9 @@ export default function ControlAccountReconciliations() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={capabilitiesImg} 
-                alt="Capabilities diagram" 
+              <img
+                src={capabilitiesImg}
+                alt="Capabilities diagram"
                 className="w-full max-w-[380px] h-auto rounded-3xl"
               />
             </div>
@@ -185,7 +185,7 @@ export default function ControlAccountReconciliations() {
       {/* 4. Benefits (White Background) */}
       <section id="elements" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Benefits of Control Accounts Reconciliation
@@ -209,9 +209,9 @@ export default function ControlAccountReconciliations() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={benefitsImg} 
-                alt="Benefits diagram" 
+              <img
+                src={benefitsImg}
+                alt="Benefits diagram"
                 className="w-full max-w-[440px] h-auto rounded-3xl"
               />
             </div>
@@ -223,7 +223,7 @@ export default function ControlAccountReconciliations() {
       {/* 5. Software (Light Backdrop) */}
       <section id="software" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Software Used By Us
@@ -243,9 +243,9 @@ export default function ControlAccountReconciliations() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center">
-            <img 
-              src={wheelImg} 
-              alt="Technology workflow circular image" 
+            <img
+              src={wheelImg}
+              alt="Technology workflow circular image"
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -256,7 +256,7 @@ export default function ControlAccountReconciliations() {
       {/* 6. Other Outsourcing Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#1D67CD] tracking-tight">
               Other Outsourcing Services

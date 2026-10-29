@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import corridorImg from '../assets/india_saudi_corridor.png'
+import corridorImg from '../assets/india_saudi_corridor.webp'
 import budgetingPlanning from '../assets/capital_budgeting_planning.png'
 import budgetingInfographic from '../assets/capital_budgeting_infographic.png'
 
@@ -27,7 +27,7 @@ export default function CapitalBudgeting() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-[#1D67CD] text-white py-12 md:py-16 min-h-[500px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +42,7 @@ export default function CapitalBudgeting() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#00305B] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
                 >
                   <span>Connect to us</span>
@@ -65,7 +65,7 @@ export default function CapitalBudgeting() {
       {/* 2. Capital Planning & Budgeting Explanation */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-4xl space-y-4">
             <h2 className="text-[26px] md:text-[30px] font-display font-extrabold text-slate-800 leading-snug">
               The process of budgeting the capital investment of a firm can be understood as Capital planning and budgeting.
@@ -89,7 +89,7 @@ export default function CapitalBudgeting() {
                 At BnC, we help companies who lack the resources to do a proper capital budgeting study since either management is occupied with everyday tasks or there aren't any internal resources available to do so.
               </p>
             </div>
-            
+
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
               <img
@@ -106,7 +106,7 @@ export default function CapitalBudgeting() {
       {/* 3. Routine Capital Choices Section */}
       <section className="py-16 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          
+
           <div className="max-w-3xl space-y-3">
             <h2 className="text-[28px] md:text-[32px] font-display font-extrabold text-white leading-tight">
               At BnC Global, we offer assistance with routine capital planning and budgeting choices like:

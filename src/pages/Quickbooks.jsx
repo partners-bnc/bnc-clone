@@ -9,11 +9,11 @@ export default function Quickbooks() {
     { name: 'Accounting', path: '/accounting' },
     { name: 'AR AP', path: '/ar-ap' },
     { name: 'Audit Support Service', path: '/audit-support-service' },
-    { name: 'Bookkeeping', path: '/bookeeping' },
-    { name: 'Financial Statements Preparation Services', path: '/financial-statment-preparation-services' },
+    { name: 'Bookkeeping', path: '/bookkeeping' },
+    { name: 'Financial Statements Preparation Services', path: '/financial-statement-preparation-services' },
     { name: 'Inventory Management', path: '/inventory-management' },
     { name: 'XERO Accounting', path: '/xero-accounting' },
-    { name: 'Outsourced Tax Preparation', path: '/outsouced-tax-preparation' },
+    { name: 'Outsourced Tax Preparation', path: '/outsourced-tax-preparation' },
     { name: 'Quickbooks', path: '/quickbooks' },
     { name: 'Payroll Processing', path: '/payroll-processing' },
     { name: 'Virtual Accounting', path: '/virtual-accounting' }
@@ -111,14 +111,14 @@ export default function Quickbooks() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="relative w-full py-24 md:py-32 min-h-[500px] flex items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#00305B]/85" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-6">
           <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-normal leading-tight">
             Quickbooks Bookkeeping Services
@@ -128,7 +128,7 @@ export default function Quickbooks() {
           </p>
           <div className="pt-4">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
             >
               <span>Connect to us</span>
@@ -141,7 +141,7 @@ export default function Quickbooks() {
       {/* 2. Overview Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Efficient QuickBooks Accounting and Setup Services
@@ -168,9 +168,9 @@ export default function Quickbooks() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={graphsImg} 
-                alt="Business graphs and bookkeeping metrics" 
+              <img
+                src={graphsImg}
+                alt="Business graphs and bookkeeping metrics"
                 className="w-full max-w-[480px] h-auto rounded-3xl shadow-lg object-cover"
               />
             </div>
@@ -182,7 +182,7 @@ export default function Quickbooks() {
       {/* 3. Setup Services (Navy Background) */}
       <section className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-[#A3D9F6] leading-tight">
               Streamlined Accounting Setup Services
@@ -197,7 +197,7 @@ export default function Quickbooks() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {setupServices.map((task, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-3 hover:bg-white/10 hover:border-white/20 transition-all items-start"
               >
@@ -215,7 +215,7 @@ export default function Quickbooks() {
       {/* 4. Categorized Scope of Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               We offer the following QuickBooks Accounting & Bookkeeping Services:
@@ -258,7 +258,7 @@ export default function Quickbooks() {
               </p>
             </div>
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 transition-colors shrink-0"
             >
               <span>Connect to us</span>

@@ -1,10 +1,82 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "cleanUrls": true,
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/bookeeping",
+      "destination": "/bookkeeping",
+      "permanent": true
+    },
+    {
+      "source": "/financial-statment-preparation-services",
+      "destination": "/financial-statement-preparation-services",
+      "permanent": true
+    },
+    {
+      "source": "/income-tax-service-soutsourcing",
+      "destination": "/income-tax-outsourcing",
+      "permanent": true
+    },
+    {
+      "source": "/outsouced-tax-preparation",
+      "destination": "/outsourced-tax-preparation",
+      "permanent": true
+    },
+    {
+      "source": "/pay",
+      "destination": "/payroll-reconciliation",
+      "permanent": true
+    },
+    {
+      "source": "/year-end",
+      "destination": "/year-end-accounting",
+      "permanent": true
+    },
+    {
+      "source": "/contact-8",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/outsourcing",
+      "destination": "/accounts-outsourcing",
+      "permanent": true
+    },
+    {
+      "source": "/countires-we-serve/australia",
+      "destination": "/countries-we-serve/australia",
+      "permanent": true
+    },
+    {
+      "source": "/countires-we-serve/canada",
+      "destination": "/countries-we-serve/canada",
+      "permanent": true
+    },
+    {
+      "source": "/countires-we-serve/saudi-arabia",
+      "destination": "/countries-we-serve/saudi-arabia",
+      "permanent": true
+    },
+    {
+      "source": "/countires-we-serve/uae",
+      "destination": "/countries-we-serve/uae",
+      "permanent": true
+    },
+    {
+      "source": "/careers/elevate",
+      "destination": "/elevate",
+      "permanent": true
+    },
+    {
+      "source": "/careers/transforming-professionals",
+      "destination": "/transforming-professionals",
+      "permanent": true
+    },
+    {
+      "source": "/careers/communities",
+      "destination": "/communities",
+      "permanent": true
     }
   ]
 }

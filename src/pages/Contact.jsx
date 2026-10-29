@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import contactHero from '../assets/contact_hero.png'
+import contactHero from '../assets/contact_hero.webp'
 import contactVisit from '../assets/contact_visit.png'
 import contactEmail from '../assets/contact_email.png'
 import contactWhatsapp from '../assets/contact_whatsapp.png'
 import { Send, CheckCircle2 } from 'lucide-react'
-import SEO from '../components/SEO'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,12 +30,8 @@ export default function Contact() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      <SEO
-        title="Contact Us - Global Offices in India & Saudi Arabia"
-        description="Get in touch with BNC Global. Reach our offices in Riyadh, Saudi Arabia and Gurgaon, India for financial consulting and advisory services."
-        canonical="/contact-8"
-      />
-      
+
+
       {/* 1. Hero Banner */}
       <section className="relative py-24 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -62,7 +57,7 @@ export default function Contact() {
       <section className="py-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Visit Us */}
             <div className="p-8 rounded-3xl border border-slate-200 bg-slate-50/50 shadow-sm space-y-6">
               <div className="w-[56px] h-[56px] flex items-center justify-center">
@@ -70,7 +65,7 @@ export default function Contact() {
               </div>
               <div className="space-y-4">
                 <h3 className="text-xl font-bold text-slate-900">Visit Us</h3>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-sm font-bold text-slate-700 uppercase">Riyadh Office</h4>
                   <p className="text-slate-600 text-sm leading-relaxed">
@@ -125,7 +120,7 @@ export default function Contact() {
               </div>
               <div className="space-y-4">
                 <h3 className="text-xl font-bold text-slate-900">Contact Us</h3>
-                
+
                 <div className="space-y-1">
                   <h4 className="text-xs font-bold text-slate-400 uppercase">Consulting Inquiries</h4>
                   <a href="mailto:summit@bncglobal.in" className="text-[#1D67CD] hover:underline font-semibold text-base block">
@@ -149,7 +144,7 @@ export default function Contact() {
       {/* 3. Connect with a Specialist Form */}
       <section className="py-20 md:py-28 bg-slate-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#1D67CD] tracking-tight">
               Connect with a Specialist
@@ -178,7 +173,7 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* First Name */}
                   <div className="space-y-1">

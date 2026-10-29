@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Calendar, Clock, User, ArrowRight, Search, BookOpen, AlertCircle, Globe } from 'lucide-react'
-import SEO from '../components/SEO'
 import { getStories, resolveImageUrl } from '../services/storyblok'
 
 export default function Blog() {
@@ -50,10 +49,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <SEO
-        title="Insights & Blog | BNC Global"
-        description="Expert insights, risk management strategies, accounting intelligence, and ESG advisory from BNC Global."
-      />
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Loading state */}
@@ -199,7 +195,7 @@ export default function Blog() {
                               alt={title}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                               onError={(e) => {
-                                if (content.cover_image_url.startsWith('/')) {
+                                if (typeof content.cover_image_url === 'string' && content.cover_image_url.startsWith('/')) {
                                   e.target.src = `https://bnc-blog.netlify.app${content.cover_image_url}`
                                 }
                               }}

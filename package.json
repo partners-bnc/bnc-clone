@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "generate-sitemap": "node scripts/generate-sitemap.js",
-    "build": "node scripts/generate-sitemap.js && vite build",
+    "build": "node scripts/prepare-seo.mjs && vite build && node scripts/prerender.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:seo": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "@fontsource-variable/wix-madefor-display": "^5.2.8",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@sparticuz/chromium": "^153.0.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
@@ -30,6 +32,10 @@
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
     "playwright": "^1.61.1",
+    "playwright-core": "^1.64.1",
     "vite": "^8.1.1"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }

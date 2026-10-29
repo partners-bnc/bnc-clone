@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Calendar, Clock, User, Share2, AlertCircle } from 'lucide-react'
-import SEO from '../components/SEO'
 import { getStoryBySlug, resolveImageUrl } from '../services/storyblok'
 import StoryblokBlockRenderer from '../components/blog/StoryblokBlockRenderer'
 
@@ -101,7 +100,6 @@ export default function BlogPost() {
 
   const content = story.content || {}
   const title = content.title || story.name
-  const metaDesc = content.meta_desc || content.excerpt || ''
   const category = content.category
   const author = content.author
   const date = content.date || story.first_published_at
@@ -109,35 +107,8 @@ export default function BlogPost() {
   const coverImageUrl = content.cover_image_url
   const bodyBlocks = content.body || []
 
-  // Article JSON-LD Schema
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: title,
-    description: metaDesc,
-    image: coverImageUrl ? [coverImageUrl] : undefined,
-    datePublished: date,
-    author: {
-      '@type': 'Person',
-      name: author || 'BNC Global',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'BNC Global',
-      url: 'https://www.bncglobal.in',
-    },
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title={title}
-        description={metaDesc}
-        ogType="article"
-        ogImage={coverImageUrl}
-        jsonLd={articleSchema}
-      />
-      {metaDesc && <meta name="description" content={metaDesc} />}
 
       {/* Article Header */}
       <header className="bg-slate-50 border-b border-slate-200/80 pt-10 pb-12 sm:pt-14 sm:pb-16">

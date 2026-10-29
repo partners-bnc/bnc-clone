@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react'
 import heroBg from '../assets/bookkeeping_hero_bg.jpg'
 import badgeImg from '../assets/bookkeeping_2_badge.png'
-import flowImg from '../assets/bookkeeping_detailed_flow.png'
+import flowImg from '../assets/bookkeeping_detailed_flow.webp'
 
 export default function Bookkeeping() {
   const subServices = [
     { name: 'Accounting', path: '/accounting' },
     { name: 'AR AP', path: '/ar-ap' },
     { name: 'Audit Support Service', path: '/audit-support-service' },
-    { name: 'Bookkeeping', path: '/bookeeping' },
-    { name: 'Financial Statements Preparation Services', path: '/financial-statment-preparation-services' },
+    { name: 'Bookkeeping', path: '/bookkeeping' },
+    { name: 'Financial Statements Preparation Services', path: '/financial-statement-preparation-services' },
     { name: 'Inventory Management', path: '/inventory-management' },
     { name: 'XERO Accounting', path: '/xero-accounting' },
-    { name: 'Outsourced Tax Preparation', path: '/outsouced-tax-preparation' },
+    { name: 'Outsourced Tax Preparation', path: '/outsourced-tax-preparation' },
     { name: 'Quickbooks', path: '/quickbooks' },
     { name: 'Payroll Processing', path: '/payroll-processing' },
     { name: 'Virtual Accounting', path: '/virtual-accounting' }
@@ -28,14 +28,14 @@ export default function Bookkeeping() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="relative w-full py-24 md:py-32 min-h-[500px] flex items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#00305B]/85" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-6">
           <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-normal leading-tight">
             Book-Keeping Services
@@ -45,7 +45,7 @@ export default function Bookkeeping() {
           </p>
           <div className="pt-4">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
             >
               <span>Connect to us</span>
@@ -58,7 +58,7 @@ export default function Bookkeeping() {
       {/* 2. Challenges & Inadequate Bookkeeping Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
@@ -68,7 +68,7 @@ export default function Bookkeeping() {
               <p className="text-slate-600 font-avenir text-[16px] leading-relaxed">
                 We understand that inadequate bookkeeping can lead to critical operational challenges:
               </p>
-              
+
               <div className="space-y-4">
                 {challenges.map((challenge, idx) => (
                   <div key={idx} className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
@@ -87,9 +87,9 @@ export default function Bookkeeping() {
 
             {/* Right Badge Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={badgeImg} 
-                alt="Bookkeeping process badge" 
+              <img
+                src={badgeImg}
+                alt="Bookkeeping process badge"
                 className="w-full max-w-[380px] h-auto rounded-3xl object-cover"
               />
             </div>
@@ -101,7 +101,7 @@ export default function Bookkeeping() {
       {/* 3. Offshore Value (Navy Background) */}
       <section className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          
+
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-[#A3D9F6] leading-tight">
               Offshore Bookkeeping for Small & Medium Enterprises
@@ -126,7 +126,7 @@ export default function Bookkeeping() {
       {/* 4. Aspects Diagram Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               The following are the main aspects of our online bookkeeping service:
@@ -135,9 +135,9 @@ export default function Bookkeeping() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center">
-            <img 
-              src={flowImg} 
-              alt="Bookkeeping detailed flow illustration" 
+            <img
+              src={flowImg}
+              alt="Bookkeeping detailed flow illustration"
               className="w-full h-auto rounded-3xl shadow-lg border border-slate-100"
             />
           </div>

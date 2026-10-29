@@ -37,7 +37,7 @@ export default function Header() {
       ],
     },
     { name: 'About us', path: '/about-us' },
-    { name: 'Contact Us', path: '/contact-8' },
+    { name: 'Contact Us', path: '/contact' },
   ]
 
   const isActive = (path) => {

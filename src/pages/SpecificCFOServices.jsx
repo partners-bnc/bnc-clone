@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import corridorImg from '../assets/india_saudi_corridor.png'
-import partnershipImg from '../assets/partnership.jpg'
+import corridorImg from '../assets/india_saudi_corridor.webp'
+import partnershipImg from '../assets/partnership.webp'
 
 export default function SpecificCFOServices() {
   const subServices = [
@@ -26,7 +26,7 @@ export default function SpecificCFOServices() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-[#1D67CD] text-white py-12 md:py-16 min-h-[500px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +41,7 @@ export default function SpecificCFOServices() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#00305B] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
                 >
                   <span>Connect to us</span>
@@ -64,7 +64,7 @@ export default function SpecificCFOServices() {
       {/* 2. Situations Necessitating Part-Time CFO (White/Mint Background) */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-4xl space-y-4">
             <h2 className="text-[28px] md:text-[32px] font-display font-extrabold text-slate-800 tracking-tight leading-snug">
               Any of the following situations necessitates the hiring of a part-time CFO:
@@ -123,7 +123,7 @@ export default function SpecificCFOServices() {
       <section className="py-16 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-[28px] md:text-[32px] font-display font-extrabold text-white leading-tight">

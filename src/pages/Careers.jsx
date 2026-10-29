@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import careersHero from '../assets/careers_hero.png'
 import careersStaffing from '../assets/careers_staffing.png'
-import careersFooter from '../assets/careers_footer.jpg'
+import careersFooter from '../assets/careers_footer.webp'
 import { Mail, CheckCircle2, MessageSquare, ArrowRight, User, GraduationCap, Briefcase, Calendar, UploadCloud, MapPin, Phone } from 'lucide-react'
-import SEO from '../components/SEO'
 
 export default function Careers() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -40,17 +39,13 @@ export default function Careers() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      <SEO
-        title="Careers & Opportunities - Join BNC Global"
-        description="Explore career opportunities at BNC Global. Join our team of risk advisory, financial, and management consulting professionals."
-        canonical="/careers"
-      />
-      
+
+
       {/* 1. Hero Section */}
       <section className="py-20 md:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column */}
             <div className="lg:col-span-6 space-y-6">
               <h1 className="text-[45px] font-display font-extrabold text-[#00305B] tracking-tight leading-tight">
@@ -87,7 +82,7 @@ export default function Careers() {
       <section className="py-20 md:py-28 bg-slate-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column */}
             <div className="lg:col-span-6 space-y-6">
               <h2 className="text-[30px] font-display font-extrabold text-black tracking-tight">
@@ -129,7 +124,7 @@ export default function Careers() {
       <section className="py-16 border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             {/* Mail Box */}
             <a
               href="mailto:info@bncglobal.in"
@@ -167,7 +162,7 @@ export default function Careers() {
       {/* 4. Application Form (Single page form container) */}
       <section id="application-form" className="py-20 md:py-28 bg-slate-50 border-b border-slate-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center space-y-3">
             <h2 className="text-[28px] font-display font-extrabold text-black tracking-tight">
               Your ambition is as bold as ours.
@@ -196,7 +191,7 @@ export default function Careers() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name */}
                   <div className="space-y-1">

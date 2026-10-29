@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import heroImg from '../assets/business_analysis_market.png'
 import capabilitiesImg from '../assets/business_analysis_capabilities.png'
 import processImg from '../assets/business_analysis_process.png'
-import benefitsImg from '../assets/business_analysis_benefits.png'
+import benefitsImg from '../assets/business_analysis_benefits.webp'
 import logoBalsamiq from '../assets/logo_balsamiq.png'
 import logoEdrawmax from '../assets/logo_edrawmax.png'
 import logoTrello from '../assets/logo_trello.png'
@@ -18,7 +18,7 @@ export default function BusinessAnalysis() {
     { name: 'Controller services', path: '/controller-services' },
     { name: 'Cost Analysis', path: '/cost-analysis' },
     { name: 'Customer & Vendor Reconciliation', path: '/customer-vendor-reconciliation' },
-    { name: 'Pay', path: '/pay' },
+    { name: 'Pay', path: '/payroll-reconciliation' },
     { name: 'Finance Advisory', path: '/finance-advisory' },
     { name: 'Digital Stock / Asset Verification', path: '/digital-stock-asset-verification' },
     { name: 'Create / Manage Your GCC In India', path: '/create-or-manage-your-gcc-in-india' }
@@ -60,12 +60,12 @@ export default function BusinessAnalysis() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-[#00305B] to-[#0A2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl md:text-5xl font-display font-extrabold tracking-normal leading-tight">
@@ -76,7 +76,7 @@ export default function BusinessAnalysis() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md transition-colors"
                 >
                   <span>Connect to us</span>
@@ -103,9 +103,9 @@ export default function BusinessAnalysis() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={heroImg} 
-                alt="Business analysis market research illustration" 
+              <img
+                src={heroImg}
+                alt="Business analysis market research illustration"
                 className="w-full max-w-[440px] h-auto object-cover rounded-3xl"
               />
             </div>
@@ -116,7 +116,7 @@ export default function BusinessAnalysis() {
       {/* 2. Our Capabilities (White Background) */}
       <section id="capabilities" className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-slate-600 font-avenir text-[16px] leading-relaxed">
@@ -133,9 +133,9 @@ export default function BusinessAnalysis() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={capabilitiesImg} 
-                alt="Business capabilities diagram" 
+              <img
+                src={capabilitiesImg}
+                alt="Business capabilities diagram"
                 className="w-full max-w-[380px] h-auto rounded-3xl"
               />
             </div>
@@ -147,7 +147,7 @@ export default function BusinessAnalysis() {
       {/* 3. Our Business Analytics Process (Navy Background) */}
       <section id="process" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
               Our Business Analytics Process
@@ -158,9 +158,9 @@ export default function BusinessAnalysis() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center">
-            <img 
-              src={processImg} 
-              alt="Business analytics workflow process diagram" 
+            <img
+              src={processImg}
+              alt="Business analytics workflow process diagram"
               className="w-full h-auto rounded-3xl"
             />
           </div>
@@ -170,7 +170,7 @@ export default function BusinessAnalysis() {
       {/* 4. Analysis Tools and Techniques (White Background) */}
       <section id="software" className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Analysis Tools and Techniques
@@ -204,9 +204,9 @@ export default function BusinessAnalysis() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center">
-            <img 
-              src={benefitsImg} 
-              alt="Benefits diagram graphic" 
+            <img
+              src={benefitsImg}
+              alt="Benefits diagram graphic"
               className="w-full h-auto rounded-3xl shadow-sm border border-slate-200"
             />
           </div>
@@ -216,7 +216,7 @@ export default function BusinessAnalysis() {
       {/* 6. Solutions We Offer (Navy Background) */}
       <section id="solutions" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-[#A3D9F6] leading-tight">
               We offer the following business analytics solutions:
@@ -225,7 +225,7 @@ export default function BusinessAnalysis() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {solutions.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-3 hover:bg-white/10 hover:border-white/20 transition-all items-start"
               >
@@ -243,7 +243,7 @@ export default function BusinessAnalysis() {
       {/* 7. Other Outsourcing Services */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#1D67CD] tracking-tight">
               Other Outsourcing Services

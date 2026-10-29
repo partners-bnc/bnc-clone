@@ -214,7 +214,7 @@ export default function UAE() {
               <p className="text-[17px] text-slate-300 leading-relaxed font-avenir">
                 If you would like to outsource to BnC Global, please fill in our inquiry form. Our sales executives will get in touch with you immediately. Even if you are not yet ready to venture into outsourcing, you are always welcome to get in touch with us to find out more about outsourcing to India.
               </p>
-              <Link to="/contact-8" className="inline-block px-8 py-3.5 rounded-full font-bold bg-[#A3D9F6] hover:bg-[#86c6e9] text-[#0B2F5B] shadow-md active:scale-98 transition-all text-[14px]">
+              <Link to="/contact" className="inline-block px-8 py-3.5 rounded-full font-bold bg-[#A3D9F6] hover:bg-[#86c6e9] text-[#0B2F5B] shadow-md active:scale-98 transition-all text-[14px]">
                 Contact us
               </Link>
             </div>
@@ -263,7 +263,7 @@ export default function UAE() {
               <p className="text-[16px] text-slate-300 font-avenir leading-relaxed">
                 Gain a first-hand understanding on how outsourcing can help you by signing up for one of BnC Global&rsquo;s Free Trial Programs. Our sales executives will get in touch with you immediately.
               </p>
-              <Link to="/contact-8" className="px-8 py-3.5 rounded-full font-bold bg-[#A3D9F6] hover:bg-[#86c6e9] text-[#0B2F5B] shadow-md active:scale-98 transition-all inline-block text-[14px]">
+              <Link to="/contact" className="px-8 py-3.5 rounded-full font-bold bg-[#A3D9F6] hover:bg-[#86c6e9] text-[#0B2F5B] shadow-md active:scale-98 transition-all inline-block text-[14px]">
                 Visit here
               </Link>
             </div>

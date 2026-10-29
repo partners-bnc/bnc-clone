@@ -1,11 +1,11 @@
 import cfoHero from '../assets/cfo_hero.png'
 import cfoChallenges from '../assets/cfo_challenges.png'
-import cfoRisks from '../assets/cfo_risks.jpg'
-import cfoValue from '../assets/cfo_value.png'
-import corridorImg from '../assets/india_saudi_corridor.png'
-import cfoInfographic1 from '../assets/cfo_infographic1.png'
+import cfoRisks from '../assets/cfo_risks.webp'
+import cfoValue from '../assets/cfo_value.webp'
+import corridorImg from '../assets/india_saudi_corridor.webp'
+import cfoInfographic1 from '../assets/cfo_infographic1.webp'
 import cfoInfographic2 from '../assets/cfo_infographic2.png'
-import cfoInfographic3 from '../assets/cfo_infographic3.png'
+import cfoInfographic3 from '../assets/cfo_infographic3.webp'
 import cfoInfographic4 from '../assets/cfo_infographic4.png'
 import cfoInfographic5 from '../assets/cfo_infographic5.png'
 import cfoNum20 from '../assets/cfo_num20.png'
@@ -13,7 +13,6 @@ import cfoNum21 from '../assets/cfo_num21.png'
 import cfoNum22 from '../assets/cfo_num22.png'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import SEO from '../components/SEO'
 
 export default function VirtualCFO() {
   const subServices = [
@@ -30,12 +29,8 @@ export default function VirtualCFO() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      <SEO
-        title="Virtual CFO Services & Financial Advisory"
-        description="Boardroom-ready Virtual CFO services including capital budgeting, ICFR internal controls, tax advisory, and strategic financial management."
-        canonical="/virtual-cfo"
-      />
-      
+
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-white py-12 md:py-16 border-b border-slate-100 min-h-[600px] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +53,7 @@ export default function VirtualCFO() {
               </div>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-blue-600 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
                 >
                   <span>Connect to us</span>
@@ -174,7 +169,7 @@ export default function VirtualCFO() {
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* List left */}
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-[30px] font-display font-extrabold tracking-normal">
@@ -183,7 +178,7 @@ export default function VirtualCFO() {
               <p className="text-black text-[17px] leading-relaxed font-medium font-avenir">
                 Organizations without a CFO on their board or those needing support for the CFO office are susceptible to significant risks if they do not engage a Virtual CFO at the appropriate stage and moment.
               </p>
-              
+
               <ul className="list-disc pl-5 space-y-2 text-[#1D67CD] text-[17px] font-semibold font-sans">
                 <li>Missed business opportunities</li>
                 <li>Weak control systems & inefficient processes</li>
@@ -215,13 +210,13 @@ export default function VirtualCFO() {
       <section className="py-16 bg-[#0B2F5B] border-b border-slate-100 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* List left */}
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-[30px] font-display font-extrabold text-white tracking-normal">
                 Enhancing Value with a Virtual CFO
               </h2>
-              
+
               <ul className="list-disc pl-5 space-y-2 text-[#BFD9ED] text-[17px] font-medium font-avenir">
                 <li>Hiring & retaining an experienced CFO is difficult for MSMEs</li>
                 <li>Builds credibility, trust, and strong networks</li>
@@ -314,7 +309,7 @@ export default function VirtualCFO() {
                 className="p-5 rounded-2xl border border-slate-200 bg-slate-50/50 hover:border-[#1D67CD] transition-all flex items-center justify-between group"
               >
                 <span className="font-bold text-slate-800 text-sm font-sans">{service}</span>
-                <Link to="/contact-8" className="text-[#1D67CD] group-hover:translate-x-1 transition-transform">
+                <Link to="/contact" className="text-[#1D67CD] group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

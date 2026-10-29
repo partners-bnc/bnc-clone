@@ -1,3 +1,8 @@
+let snapshot;
+async function getPublishedSnapshot() {
+  snapshot ??= fetch('/content/blog.json').then(response => { if (!response.ok) throw new Error('Published content is unavailable'); return response.json(); }).catch(() => null);
+  return snapshot;
+}
 const TOKEN = import.meta.env.VITE_STORYBLOK_DELIVERY_API_TOKEN || import.meta.env.VITE_STORYBLOK_ACCESS_TOKEN || 'NANaTrJ4WxiDfcUjeR2dmwtt'
 const VERSION = import.meta.env.VITE_STORYBLOK_CONTENT_VERSION || 'published'
 const API_BASE = 'https://api.storyblok.com/v2/cdn'
@@ -9,6 +14,8 @@ const API_BASE = 'https://api.storyblok.com/v2/cdn'
  */
 export async function getStoryBySlug(slug) {
   try {
+    const cached = await getPublishedSnapshot();
+    if (cached) return cached.find(story => story.full_slug === slug || story.slug === slug.replace(/^blog\//, '')) || null;
     const cleanSlug = slug.replace(/^\/+/, '')
     const url = `${API_BASE}/stories/${cleanSlug}?token=${TOKEN}&version=${VERSION}&cv=${Date.now()}`
     const res = await fetch(url)
@@ -34,6 +41,8 @@ export async function getStoryBySlug(slug) {
  */
 export async function getStories({ startsWith = '', perPage = 25, page = 1 } = {}) {
   try {
+    const cached = await getPublishedSnapshot();
+    if (cached) { const stories = cached.filter(story => !startsWith || story.full_slug.startsWith(startsWith)); return {stories, total:stories.length}; }
     const params = new URLSearchParams({
       token: TOKEN,
       version: VERSION,

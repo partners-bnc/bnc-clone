@@ -30,3 +30,6 @@ mirrored-site
 public/file.mp4
 
 links_to_clone.txt
+# Generated public snapshots
+public/content/
+seo-build.json

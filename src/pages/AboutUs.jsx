@@ -1,20 +1,15 @@
-import aboutHero from '../assets/about_hero.png'
+import aboutHero from '../assets/about_hero.webp'
 import visionIcon from '../assets/vision_icon2.png'
 import timelineImg from '../assets/timeline.png'
-import partnershipImg from '../assets/partnership.jpg'
+import partnershipImg from '../assets/partnership.webp'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import SEO from '../components/SEO'
 
 export default function AboutUs() {
   return (
     <div className="bg-[#0B2F5B] text-slate-800 antialiased font-sans">
-      <SEO
-        title="About Us - BNC Global Consultech"
-        description="Learn about BNC Global Consultech, a contemporary risk advisory and management consulting firm serving SMEs, startups, and global enterprises."
-        canonical="/about-us"
-      />
-      
+
+
       {/* 1. Hero Section (Pixel Perfect Constraints) */}
       <section className="relative w-full min-h-[665px] bg-[#0B2F5B] text-white border-b border-slate-800 flex flex-col lg:flex-row justify-between items-stretch overflow-hidden">
         {/* Left text column */}
@@ -83,7 +78,7 @@ export default function AboutUs() {
 
           {/* Overlaid labels on desktop */}
           <div className="hidden md:block absolute inset-0 pointer-events-none select-none">
-            
+
             {/* Bottom Row */}
             {/* 2014 - Incorporation */}
             <div className="absolute left-[7%] bottom-[5%] w-[130px] text-center">
@@ -178,7 +173,7 @@ export default function AboutUs() {
           />
           <div className="absolute inset-0 bg-[#0B2F5B]/80 z-0" />
         </div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6 text-white py-12">
           <h2 className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
             Partnerships

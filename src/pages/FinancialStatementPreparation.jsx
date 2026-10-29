@@ -9,11 +9,11 @@ export default function FinancialStatementPreparation() {
     { name: 'Accounting', path: '/accounting' },
     { name: 'AR AP', path: '/ar-ap' },
     { name: 'Audit Support Service', path: '/audit-support-service' },
-    { name: 'Bookkeeping', path: '/bookeeping' },
-    { name: 'Financial Statements Preparation Services', path: '/financial-statment-preparation-services' },
+    { name: 'Bookkeeping', path: '/bookkeeping' },
+    { name: 'Financial Statements Preparation Services', path: '/financial-statement-preparation-services' },
     { name: 'Inventory Management', path: '/inventory-management' },
     { name: 'XERO Accounting', path: '/xero-accounting' },
-    { name: 'Outsourced Tax Preparation', path: '/outsouced-tax-preparation' },
+    { name: 'Outsourced Tax Preparation', path: '/outsourced-tax-preparation' },
     { name: 'Quickbooks', path: '/quickbooks' },
     { name: 'Payroll Processing', path: '/payroll-processing' },
     { name: 'Virtual Accounting', path: '/virtual-accounting' }
@@ -33,14 +33,14 @@ export default function FinancialStatementPreparation() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="relative w-full py-24 md:py-32 min-h-[500px] flex items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#00305B]/85" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-6">
           <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-normal leading-tight">
             Financial Statement Preparation Services
@@ -50,7 +50,7 @@ export default function FinancialStatementPreparation() {
           </p>
           <div className="pt-4">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
             >
               <span>Connect to us</span>
@@ -63,7 +63,7 @@ export default function FinancialStatementPreparation() {
       {/* 2. Precision Compliant Process (White Background) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-slate-600 font-avenir text-[16px] leading-relaxed">
@@ -83,9 +83,9 @@ export default function FinancialStatementPreparation() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={featureImg} 
-                alt="Consolidated financial charts" 
+              <img
+                src={featureImg}
+                alt="Consolidated financial charts"
                 className="w-full max-w-[440px] h-auto rounded-3xl shadow-lg border border-slate-100 object-cover"
               />
             </div>
@@ -97,7 +97,7 @@ export default function FinancialStatementPreparation() {
       {/* 3. Systematic Process (Navy Background) */}
       <section className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="max-w-3xl space-y-4">
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-[#A3D9F6] leading-tight">
               We organize financial statement preparation systematically
@@ -108,12 +108,12 @@ export default function FinancialStatementPreparation() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={budgetingImg} 
-                alt="Budgeting forecasting blueprint" 
+              <img
+                src={budgetingImg}
+                alt="Budgeting forecasting blueprint"
                 className="w-full max-w-[320px] rounded-3xl"
               />
             </div>
@@ -121,7 +121,7 @@ export default function FinancialStatementPreparation() {
             {/* Right Workflow */}
             <div className="lg:col-span-7 space-y-4">
               {workflow.map((step, idx) => (
-                <div 
+                <div
                   key={idx}
                   className="bg-white/5 border border-white/10 p-4 rounded-2xl flex gap-3 hover:bg-white/10 hover:border-white/20 transition-all items-center"
                 >

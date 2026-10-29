@@ -10,11 +10,11 @@ export default function OutsourcedTaxPreparation() {
     { name: 'Accounting', path: '/accounting' },
     { name: 'AR AP', path: '/ar-ap' },
     { name: 'Audit Support Service', path: '/audit-support-service' },
-    { name: 'Bookkeeping', path: '/bookeeping' },
-    { name: 'Financial Statements Preparation Services', path: '/financial-statment-preparation-services' },
+    { name: 'Bookkeeping', path: '/bookkeeping' },
+    { name: 'Financial Statements Preparation Services', path: '/financial-statement-preparation-services' },
     { name: 'Inventory Management', path: '/inventory-management' },
     { name: 'XERO Accounting', path: '/xero-accounting' },
-    { name: 'Outsourced Tax Preparation', path: '/outsouced-tax-preparation' },
+    { name: 'Outsourced Tax Preparation', path: '/outsourced-tax-preparation' },
     { name: 'Quickbooks', path: '/quickbooks' },
     { name: 'Payroll Processing', path: '/payroll-processing' },
     { name: 'Virtual Accounting', path: '/virtual-accounting' }
@@ -50,14 +50,14 @@ export default function OutsourcedTaxPreparation() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="relative w-full py-24 md:py-32 min-h-[500px] flex items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-[#00305B]/85" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-6">
           <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-normal leading-tight">
             Outsourced Tax Preparation
@@ -67,7 +67,7 @@ export default function OutsourcedTaxPreparation() {
           </p>
           <div className="pt-4">
             <Link
-              to="/contact-8"
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer font-sans"
             >
               <span>Connect to us</span>
@@ -80,7 +80,7 @@ export default function OutsourcedTaxPreparation() {
       {/* 2. Overview Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
@@ -102,9 +102,9 @@ export default function OutsourcedTaxPreparation() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={badgeImg} 
-                alt="Tax preparation certification badge" 
+              <img
+                src={badgeImg}
+                alt="Tax preparation certification badge"
                 className="w-full max-w-[400px] h-auto rounded-3xl object-cover"
               />
             </div>
@@ -116,9 +116,9 @@ export default function OutsourcedTaxPreparation() {
       {/* 3. Why Opt for Outsourced Tax (Navy Background) */}
       <section className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-3xl md:text-4xl font-display font-extrabold text-[#A3D9F6] leading-tight">
@@ -127,7 +127,7 @@ export default function OutsourcedTaxPreparation() {
               <p className="text-[#BFD9ED] font-avenir text-[16px] leading-relaxed">
                 Our team of external tax preparers is here to make your life easier. With an 80% cost-saving advantage and a 150% faster turnaround time, we take the complexity out of tax calculation, preparation, and filing. Our seamless and expert tax preparation outsourcing services are designed to alleviate staffing shortages and reduce the stress associated with tax season.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 <div className="bg-white/5 border border-white/10 p-5 rounded-2xl flex gap-3.5">
                   <DollarSign className="w-8 h-8 text-[#A3D9F6] shrink-0" />
@@ -148,9 +148,9 @@ export default function OutsourcedTaxPreparation() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={prepImg2} 
-                alt="Outsourced Tax Advantage Checklist" 
+              <img
+                src={prepImg2}
+                alt="Outsourced Tax Advantage Checklist"
                 className="w-full max-w-[420px] rounded-3xl shadow-lg"
               />
             </div>
@@ -162,7 +162,7 @@ export default function OutsourcedTaxPreparation() {
       {/* 4. Outsourcing CPA Tax Preparation Process */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-[#00305B] tracking-tight">
               Our Outsourcing CPA Tax Preparation Process
@@ -171,13 +171,13 @@ export default function OutsourcedTaxPreparation() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Stages */}
             <div className="lg:col-span-7 space-y-8">
               <p className="text-slate-600 font-avenir text-[16px] leading-relaxed">
                 Our process begins by securely collecting all necessary data from our clients via a dedicated file-sharing platform. This includes crucial documents, financial statements, and tax organizers for the current tax year. Once we have the information, we kickstart our meticulous accuracy check by comparing it to the previous year's return (if applicable) and taking note of any carried-over balances. We meticulously review and cross-verify the balance sheet, profit & loss statement, and other relevant data provided by the client, focusing on the three C's: correctness, consistency, and completeness. Only after ensuring that all data aligns seamlessly do we proceed to input it into the tax preparation software, allowing us to spot and rectify any discrepancies before embarking on the return preparation process.
               </p>
-              
+
               <div className="space-y-6">
                 {stages.map((stage) => (
                   <div key={stage.num} className="flex gap-4 items-start">

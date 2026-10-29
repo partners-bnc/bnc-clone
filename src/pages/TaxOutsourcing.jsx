@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle2, ShieldCheck, Scale, Users2, Database, Laptop, Layers } from 'lucide-react'
+import { ArrowRight, CheckCircle2, ShieldCheck, Scale, FileSpreadsheet, Users2, Database, Laptop, Layers } from 'lucide-react'
 import heroImg from '../assets/tax_outsourcing_hero.png'
 import processImg from '../assets/tax_outsourcing_process.png'
 import assistImg from '../assets/tax_outsourcing_assist.png'
@@ -20,11 +20,11 @@ export default function TaxOutsourcing() {
     { name: 'Accounting', path: '/accounting' },
     { name: 'AR AP', path: '/ar-ap' },
     { name: 'Audit Support Service', path: '/audit-support-service' },
-    { name: 'Bookkeeping', path: '/bookeeping' },
-    { name: 'Financial Statements Preparation Services', path: '/financial-statment-preparation-services' },
+    { name: 'Bookkeeping', path: '/bookkeeping' },
+    { name: 'Financial Statements Preparation Services', path: '/financial-statement-preparation-services' },
     { name: 'Inventory Management', path: '/inventory-management' },
     { name: 'XERO Accounting', path: '/xero-accounting' },
-    { name: 'Outsourced Tax Preparation', path: '/outsouced-tax-preparation' },
+    { name: 'Outsourced Tax Preparation', path: '/outsourced-tax-preparation' },
     { name: 'Quickbooks', path: '/quickbooks' },
     { name: 'Payroll Processing', path: '/payroll-processing' },
     { name: 'Virtual Accounting', path: '/virtual-accounting' }
@@ -49,12 +49,12 @@ export default function TaxOutsourcing() {
 
   return (
     <div className="bg-white text-slate-800 antialiased font-sans">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-[#00305B] to-[#0A2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl md:text-5xl font-display font-extrabold tracking-normal leading-tight">
@@ -65,7 +65,7 @@ export default function TaxOutsourcing() {
               </p>
               <div className="pt-2">
                 <Link
-                  to="/contact-8"
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold bg-[#1D67CD] text-white hover:bg-opacity-90 shadow-md active:scale-98 transition-colors cursor-pointer"
                 >
                   <span>Connect to us</span>
@@ -92,9 +92,9 @@ export default function TaxOutsourcing() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={heroImg} 
-                alt="Tax Outsourcing illustration" 
+              <img
+                src={heroImg}
+                alt="Tax Outsourcing illustration"
                 className="w-full max-w-[480px] h-auto object-cover rounded-3xl"
               />
             </div>
@@ -137,7 +137,7 @@ export default function TaxOutsourcing() {
       {/* 3. Our Capabilities (Navy Background) */}
       <section id="capabilities" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#A3D9F6] tracking-tight">
               Our Capabilities
@@ -194,9 +194,9 @@ export default function TaxOutsourcing() {
           </div>
 
           <div className="max-w-5xl mx-auto flex justify-center">
-            <img 
-              src={processImg} 
-              alt="Outsourcing Process Workflow" 
+            <img
+              src={processImg}
+              alt="Outsourcing Process Workflow"
               className="w-full h-auto rounded-3xl shadow-lg border border-slate-100"
             />
           </div>
@@ -207,7 +207,7 @@ export default function TaxOutsourcing() {
       <section id="assist" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
               <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
@@ -236,9 +236,9 @@ export default function TaxOutsourcing() {
 
             {/* Right Image */}
             <div className="lg:col-span-6 flex justify-center">
-              <img 
-                src={assistImg} 
-                alt="Whom we assist graphic" 
+              <img
+                src={assistImg}
+                alt="Whom we assist graphic"
                 className="w-full max-w-[420px] rounded-3xl shadow-md border border-slate-200"
               />
             </div>
@@ -250,7 +250,7 @@ export default function TaxOutsourcing() {
       {/* 6. Software (White Background) */}
       <section id="software" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
               Software Used By Us
@@ -273,7 +273,7 @@ export default function TaxOutsourcing() {
       {/* 7. Misconceptions (Navy Background) */}
       <section id="misconceptions" className="py-20 bg-[#0B2F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
@@ -283,7 +283,7 @@ export default function TaxOutsourcing() {
               <p className="text-[#BFD9ED] font-avenir text-[16px] leading-relaxed">
                 Our tax outsourcing services provide the visibility and control you need, whether for a single country or multiple jurisdictions. You can count on consistent, flexible, and high-quality tax compliance services that align with your specific requirements.
               </p>
-              
+
               <div className="border-t border-white/10 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans text-[#A3D9F6]">
                 <span>✓ High visibility & corporate transparency</span>
                 <span>✓ International jurisdiction readiness</span>
@@ -294,9 +294,9 @@ export default function TaxOutsourcing() {
 
             {/* Right Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <img 
-                src={misconceptionsImg} 
-                alt="Tax preparation misconceptions illustration" 
+              <img
+                src={misconceptionsImg}
+                alt="Tax preparation misconceptions illustration"
                 className="w-full max-w-[460px] rounded-3xl shadow-lg"
               />
             </div>
@@ -308,14 +308,14 @@ export default function TaxOutsourcing() {
       {/* 8. Why Us? (White Background) */}
       <section id="whyus" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Image */}
             <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
-              <img 
-                src={whyImg} 
-                alt="Why choose BNC Global" 
+              <img
+                src={whyImg}
+                alt="Why choose BNC Global"
                 className="w-full max-w-[380px] rounded-3xl shadow-lg border border-slate-100"
               />
             </div>
@@ -325,7 +325,7 @@ export default function TaxOutsourcing() {
               <h2 className="text-3xl font-display font-extrabold text-[#00305B] tracking-tight">
                 Why Outsource Tax Preparation to BNC Global?
               </h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   'Process Standardization',
