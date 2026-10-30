@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Calendar, Clock, User, Share2, AlertCircle } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Share2, AlertCircle } from 'lucide-react'
 import { getStoryBySlug, resolveImageUrl } from '../services/storyblok'
 import StoryblokBlockRenderer from '../components/blog/StoryblokBlockRenderer'
 
@@ -40,6 +40,23 @@ export default function BlogPost() {
     loadPost()
     window.scrollTo(0, 0)
   }, [slug])
+
+  useEffect(() => {
+    if (!story || story.slug !== slug) return
+    const element = document.getElementById('site-schema')
+    if (!element) return
+    const schema = JSON.parse(element.textContent)
+    const article = schema['@graph']?.find(item => item['@type'] === 'BlogPosting')
+    if (!article) return
+    const content = story.content || {}
+    article.headline = content.title || story.name
+    article.description = content.meta_desc || content.excerpt || story.name
+    article.datePublished = content.date || story.first_published_at
+    article.dateModified = story.published_at || article.datePublished
+    if (content.author) article.author = { '@type': 'Person', name: content.author }
+    else article.author = article.publisher
+    element.textContent = JSON.stringify(schema).replace(/</g, '\\u003c')
+  }, [story, slug])
 
   const handleShare = () => {
     if (navigator.share) {

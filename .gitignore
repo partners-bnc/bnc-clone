@@ -33,3 +33,5 @@ links_to_clone.txt
 # Generated public snapshots
 public/content/
 seo-build.json
+.vercel
+.env*

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
-import {resolve,extname} from 'node:path';
+import {resolve,extname,sep} from 'node:path';
 import {createServer} from 'node:http';
 import {chromium as playwright} from 'playwright-core';
 import chromium from '@sparticuz/chromium';
@@ -27,7 +27,7 @@ const server=createServer(async(req,res)=>{
  const path=new URL(req.url,'http://localhost').pathname;
  if(site.redirects[path]){res.writeHead(308,{Location:site.redirects[path]});return res.end();}
  const file=resolve(root,path==='/'?'index.html':path.slice(1)+(path.includes('.')?'':'.html'));
- const exists=file.startsWith(root+'/')&&(await stat(file).catch(()=>null))?.isFile();
+ const exists=file.startsWith(root+sep)&&(await stat(file).catch(()=>null))?.isFile();
  res.setHeader('Content-Type',({'.js':'text/javascript','.css':'text/css','.xml':'application/xml','.txt':'text/plain','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.woff2':'font/woff2'})[extname(file)]||'text/html');
  res.statusCode=exists?200:404;res.end(await readFile(exists?file:resolve(root,'404.html')));
 });

@@ -1,11 +1,22 @@
 let snapshot;
 async function getPublishedSnapshot() {
-  snapshot ??= fetch('/content/blog.json').then(response => { if (!response.ok) throw new Error('Published content is unavailable'); return response.json(); }).catch(() => null);
+  if (VERSION !== 'published') return null;
+  snapshot ??= fetch('/content/blog.json').then(response => { if (!response.ok) throw new Error('Published content is unavailable'); return response.json(); }).then(data => Array.isArray(data) ? data : null).catch(() => null);
   return snapshot;
 }
-const TOKEN = import.meta.env.VITE_STORYBLOK_DELIVERY_API_TOKEN || import.meta.env.VITE_STORYBLOK_ACCESS_TOKEN || 'NANaTrJ4WxiDfcUjeR2dmwtt'
-const VERSION = import.meta.env.VITE_STORYBLOK_CONTENT_VERSION || 'published'
+const TOKEN = import.meta.env?.VITE_STORYBLOK_DELIVERY_API_TOKEN || import.meta.env?.VITE_STORYBLOK_ACCESS_TOKEN || 'NANaTrJ4WxiDfcUjeR2dmwtt'
+const VERSION = import.meta.env?.VITE_STORYBLOK_CONTENT_VERSION || 'published'
 const API_BASE = 'https://api.storyblok.com/v2/cdn'
+const isPrerender = () => typeof window !== 'undefined' && window.__PRERENDER__ === true
+
+function findStory(stories, slug) {
+  return stories?.find(story => story.full_slug === slug || story.slug === slug.replace(/^blog\//, '')) || null
+}
+
+function selectStories(stories, startsWith, perPage, page) {
+  const matches = stories.filter(story => !startsWith || story.full_slug.startsWith(startsWith))
+  return { stories: matches.slice((page - 1) * perPage, page * perPage), total: matches.length }
+}
 
 /**
  * Fetch a single story by its slug or path
@@ -13,12 +24,12 @@ const API_BASE = 'https://api.storyblok.com/v2/cdn'
  * @returns {Promise<object|null>}
  */
 export async function getStoryBySlug(slug) {
+  const cleanSlug = slug.replace(/^\/+/, '')
+  // The build intentionally blocks external requests. Visitors must read the CMS first.
+  if (isPrerender()) return findStory(await getPublishedSnapshot(), cleanSlug)
   try {
-    const cached = await getPublishedSnapshot();
-    if (cached) return cached.find(story => story.full_slug === slug || story.slug === slug.replace(/^blog\//, '')) || null;
-    const cleanSlug = slug.replace(/^\/+/, '')
     const url = `${API_BASE}/stories/${cleanSlug}?token=${TOKEN}&version=${VERSION}&cv=${Date.now()}`
-    const res = await fetch(url)
+    const res = await fetch(url, { signal: AbortSignal.timeout(10000) })
     if (!res.ok) {
       if (res.status === 404) return null
       throw new Error(`Failed to fetch story ${slug}: ${res.status} ${res.statusText}`)
@@ -27,7 +38,7 @@ export async function getStoryBySlug(slug) {
     return data.story
   } catch (err) {
     console.error(`[Storyblok Service] Error fetching story ${slug}:`, err)
-    return null
+    return findStory(await getPublishedSnapshot(), cleanSlug)
   }
 }
 
@@ -40,9 +51,8 @@ export async function getStoryBySlug(slug) {
  * @returns {Promise<{ stories: Array, total: number }>}
  */
 export async function getStories({ startsWith = '', perPage = 25, page = 1 } = {}) {
+  if (isPrerender()) return selectStories(await getPublishedSnapshot() || [], startsWith, perPage, page)
   try {
-    const cached = await getPublishedSnapshot();
-    if (cached) { const stories = cached.filter(story => !startsWith || story.full_slug.startsWith(startsWith)); return {stories, total:stories.length}; }
     const params = new URLSearchParams({
       token: TOKEN,
       version: VERSION,
@@ -54,7 +64,7 @@ export async function getStories({ startsWith = '', perPage = 25, page = 1 } = {
       params.append('starts_with', startsWith)
     }
 
-    const res = await fetch(`${API_BASE}/stories?${params.toString()}`)
+    const res = await fetch(`${API_BASE}/stories?${params.toString()}`, { signal: AbortSignal.timeout(10000) })
     if (!res.ok) {
       throw new Error(`Failed to fetch stories: ${res.status} ${res.statusText}`)
     }
@@ -66,7 +76,7 @@ export async function getStories({ startsWith = '', perPage = 25, page = 1 } = {
     }
   } catch (err) {
     console.error('[Storyblok Service] Error fetching stories:', err)
-    return { stories: [], total: 0 }
+    return selectStories(await getPublishedSnapshot() || [], startsWith, perPage, page)
   }
 }
 

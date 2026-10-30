@@ -1,6 +1,6 @@
 import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
 import { createServer } from 'node:http';
-import { resolve, extname, dirname } from 'node:path';
+import { resolve, extname, dirname, sep } from 'node:path';
 import { chromium as playwright } from 'playwright-core';
 import chromium from '@sparticuz/chromium';
 const site=JSON.parse(await readFile('src/seo/site.json','utf8'));
@@ -11,7 +11,7 @@ const server=createServer(async(req,res)=>{
   try {
     const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
     const file=resolve(root,'.'+pathname);
-    if (!file.startsWith(root+'/')) { res.setHeader('Content-Type','text/html');return res.end(shell); }
+    if (!file.startsWith(root+sep)) { res.setHeader('Content-Type','text/html');return res.end(shell); }
     if ((await stat(file).catch(()=>null))?.isFile()) {res.setHeader('Content-Type',mime[extname(file)]||'application/octet-stream');return res.end(await readFile(file));}
     res.setHeader('Content-Type','text/html');res.end(shell);
   }catch{res.statusCode=500;res.end('Build preview failed');}

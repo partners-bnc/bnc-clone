@@ -17,8 +17,9 @@ if (site.name === 'BNC Global') {
   const source = await readFile('src/services/storyblok.js','utf8');
   const token = env.VITE_STORYBLOK_DELIVERY_API_TOKEN || env.VITE_STORYBLOK_ACCESS_TOKEN || source.match(/\|\| '([^']+)'/)[1];
   const stories=[];
+  const cacheVersion = String(Date.now());
   for (let page=1; ; page++) {
-    const params=new URLSearchParams({token,version:'published',starts_with:'blog/',per_page:'100',page:String(page)});
+    const params=new URLSearchParams({token,version:'published',starts_with:'blog/',per_page:'100',page:String(page),cv:cacheVersion});
     const response=await fetch('https://api.storyblok.com/v2/cdn/stories?'+params,{signal:AbortSignal.timeout(60000)});
     if (!response.ok) throw new Error('Published blog snapshot failed: HTTP '+response.status);
     const data=await response.json();stories.push(...data.stories.filter(s=>!s.is_folder && s.content?.component==='blog_post'));
